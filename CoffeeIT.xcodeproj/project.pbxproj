@@ -26,6 +26,20 @@
 		01F2788326BEDFFA000B98E8 /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F2788226BEDFFA000B98E8 /* ItemTableViewCell.xib */; };
 		01F2788826BEE122000B98E8 /* ItemTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2788726BEE122000B98E8 /* ItemTableViewCellViewModel.swift */; };
 		01F2788F26BEEA18000B98E8 /* StyleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2788E26BEEA18000B98E8 /* StyleModel.swift */; };
+		01F2789626BEEF43000B98E8 /* CoffeeMachineRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2789526BEEF43000B98E8 /* CoffeeMachineRepository.swift */; };
+		01F2789C26BEEFBF000B98E8 /* SizeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2789B26BEEFBE000B98E8 /* SizeRepository.swift */; };
+		01F278A126BEF04E000B98E8 /* ExtraRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F278A026BEF04E000B98E8 /* ExtraRepository.swift */; };
+		01F278A626BEF4CE000B98E8 /* RemoteCoffeeMachineService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F278A526BEF4CE000B98E8 /* RemoteCoffeeMachineService.swift */; };
+		01F278AB26BEF506000B98E8 /* SizeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F278AA26BEF506000B98E8 /* SizeServices.swift */; };
+		01F278B026BEF512000B98E8 /* ExtraServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F278AF26BEF512000B98E8 /* ExtraServices.swift */; };
+		01F278B726BEF853000B98E8 /* ExtraServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F278B626BEF853000B98E8 /* ExtraServicesTests.swift */; };
+		01F278C426BEFBC7000B98E8 /* ServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F278BF26BEFBC7000B98E8 /* ServiceLayer.swift */; };
+		01F278C726BEFBC7000B98E8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F278C226BEFBC7000B98E8 /* Router.swift */; };
+		01F278C826BEFBC7000B98E8 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F278C326BEFBC7000B98E8 /* ServiceError.swift */; };
+		01F278CD26BEFF61000B98E8 /* SizeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F278CC26BEFF61000B98E8 /* SizeModel.swift */; };
+		01F278D226BEFF75000B98E8 /* ExtraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F278D126BEFF75000B98E8 /* ExtraModel.swift */; };
+		01F278D726BEFF8F000B98E8 /* SelectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F278D626BEFF8F000B98E8 /* SelectionModel.swift */; };
+		01F278DC26BEFFB1000B98E8 /* CoffeeMachineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F278DB26BEFFB1000B98E8 /* CoffeeMachineModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +85,20 @@
 		01F2788226BEDFFA000B98E8 /* ItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
 		01F2788726BEE122000B98E8 /* ItemTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		01F2788E26BEEA18000B98E8 /* StyleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleModel.swift; sourceTree = "<group>"; };
+		01F2789526BEEF43000B98E8 /* CoffeeMachineRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeMachineRepository.swift; sourceTree = "<group>"; };
+		01F2789B26BEEFBE000B98E8 /* SizeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeRepository.swift; sourceTree = "<group>"; };
+		01F278A026BEF04E000B98E8 /* ExtraRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraRepository.swift; sourceTree = "<group>"; };
+		01F278A526BEF4CE000B98E8 /* RemoteCoffeeMachineService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCoffeeMachineService.swift; sourceTree = "<group>"; };
+		01F278AA26BEF506000B98E8 /* SizeServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeServices.swift; sourceTree = "<group>"; };
+		01F278AF26BEF512000B98E8 /* ExtraServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraServices.swift; sourceTree = "<group>"; };
+		01F278B626BEF853000B98E8 /* ExtraServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraServicesTests.swift; sourceTree = "<group>"; };
+		01F278BF26BEFBC7000B98E8 /* ServiceLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLayer.swift; sourceTree = "<group>"; };
+		01F278C226BEFBC7000B98E8 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		01F278C326BEFBC7000B98E8 /* ServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		01F278CC26BEFF61000B98E8 /* SizeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeModel.swift; sourceTree = "<group>"; };
+		01F278D126BEFF75000B98E8 /* ExtraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraModel.swift; sourceTree = "<group>"; };
+		01F278D626BEFF8F000B98E8 /* SelectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionModel.swift; sourceTree = "<group>"; };
+		01F278DB26BEFFB1000B98E8 /* CoffeeMachineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeMachineModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +149,7 @@
 		01F2782226BED98A000B98E8 /* CoffeeIT */ = {
 			isa = PBXGroup;
 			children = (
+				01F278BE26BEFB3E000B98E8 /* Network */,
 				01F2788C26BEE9BB000B98E8 /* Domain */,
 				01F2787C26BEDFA2000B98E8 /* ItemViewCell */,
 				01F2786C26BEDD06000B98E8 /* Style */,
@@ -139,6 +168,7 @@
 		01F2783926BED98B000B98E8 /* CoffeeITTests */ = {
 			isa = PBXGroup;
 			children = (
+				01F278B426BEF823000B98E8 /* Domain */,
 				01F2783A26BED98B000B98E8 /* CoffeeITTests.swift */,
 				01F2783C26BED98B000B98E8 /* Info.plist */,
 			);
@@ -196,6 +226,8 @@
 		01F2788C26BEE9BB000B98E8 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				01F2789A26BEEF73000B98E8 /* Services */,
+				01F2789426BEEF20000B98E8 /* Repositories */,
 				01F2788D26BEE9FF000B98E8 /* Models */,
 			);
 			path = Domain;
@@ -205,8 +237,58 @@
 			isa = PBXGroup;
 			children = (
 				01F2788E26BEEA18000B98E8 /* StyleModel.swift */,
+				01F278CC26BEFF61000B98E8 /* SizeModel.swift */,
+				01F278D126BEFF75000B98E8 /* ExtraModel.swift */,
+				01F278D626BEFF8F000B98E8 /* SelectionModel.swift */,
+				01F278DB26BEFFB1000B98E8 /* CoffeeMachineModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		01F2789426BEEF20000B98E8 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				01F2789526BEEF43000B98E8 /* CoffeeMachineRepository.swift */,
+				01F2789B26BEEFBE000B98E8 /* SizeRepository.swift */,
+				01F278A026BEF04E000B98E8 /* ExtraRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		01F2789A26BEEF73000B98E8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				01F278A526BEF4CE000B98E8 /* RemoteCoffeeMachineService.swift */,
+				01F278AA26BEF506000B98E8 /* SizeServices.swift */,
+				01F278AF26BEF512000B98E8 /* ExtraServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		01F278B426BEF823000B98E8 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				01F278B526BEF839000B98E8 /* Services */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		01F278B526BEF839000B98E8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				01F278B626BEF853000B98E8 /* ExtraServicesTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		01F278BE26BEFB3E000B98E8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				01F278C226BEFBC7000B98E8 /* Router.swift */,
+				01F278C326BEFBC7000B98E8 /* ServiceError.swift */,
+				01F278BF26BEFBC7000B98E8 /* ServiceLayer.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,17 +423,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01F278C726BEFBC7000B98E8 /* Router.swift in Sources */,
 				01F2788826BEE122000B98E8 /* ItemTableViewCellViewModel.swift in Sources */,
+				01F278D726BEFF8F000B98E8 /* SelectionModel.swift in Sources */,
+				01F278A626BEF4CE000B98E8 /* RemoteCoffeeMachineService.swift in Sources */,
+				01F278B026BEF512000B98E8 /* ExtraServices.swift in Sources */,
 				01F2786426BEDA2E000B98E8 /* CoordinatorProtocol.swift in Sources */,
+				01F278CD26BEFF61000B98E8 /* SizeModel.swift in Sources */,
+				01F278A126BEF04E000B98E8 /* ExtraRepository.swift in Sources */,
 				01F2786526BEDA2E000B98E8 /* MainCoordinator.swift in Sources */,
 				01F2787E26BEDFC0000B98E8 /* ItemTableViewCell.swift in Sources */,
+				01F278AB26BEF506000B98E8 /* SizeServices.swift in Sources */,
 				01F2782826BED98A000B98E8 /* ViewController.swift in Sources */,
 				01F2788F26BEEA18000B98E8 /* StyleModel.swift in Sources */,
+				01F278D226BEFF75000B98E8 /* ExtraModel.swift in Sources */,
+				01F278C826BEFBC7000B98E8 /* ServiceError.swift in Sources */,
+				01F2789C26BEEFBF000B98E8 /* SizeRepository.swift in Sources */,
 				01F2785B26BEDA05000B98E8 /* LoadingExtention.swift in Sources */,
 				01F2782426BED98A000B98E8 /* AppDelegate.swift in Sources */,
+				01F278C426BEFBC7000B98E8 /* ServiceLayer.swift in Sources */,
+				01F278DC26BEFFB1000B98E8 /* CoffeeMachineModel.swift in Sources */,
 				01F2787326BEDD2E000B98E8 /* StyleController.swift in Sources */,
 				01F2787826BEDD3E000B98E8 /* StyleViewModel.swift in Sources */,
 				01F2785C26BEDA05000B98E8 /* BackDropView.swift in Sources */,
+				01F2789626BEEF43000B98E8 /* CoffeeMachineRepository.swift in Sources */,
 				01F2785D26BEDA05000B98E8 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +455,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01F278B726BEF853000B98E8 /* ExtraServicesTests.swift in Sources */,
 				01F2783B26BED98B000B98E8 /* CoffeeITTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

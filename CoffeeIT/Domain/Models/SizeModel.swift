@@ -1,28 +1,16 @@
 //
-//  StyleModel.swift
+//  SizeModel.swift
 //  CoffeeIT
 //
 //  Created by Amir Tutunchi on 8/7/21.
 //
 
 import Foundation
-struct StyleModel : Codable {
+struct SizeModel : Codable {
     let id : String
     let name : String
-    let sizes : [String]
-    let extras : [String]
     enum CodingKeys : String , CodingKey{
         case id = "_id"
         case name
-        case sizes
-        case extras
     }
 }
-
-
-
-
-
-
-
-

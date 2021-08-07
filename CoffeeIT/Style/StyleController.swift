@@ -14,10 +14,19 @@ class StyleController: UIViewController  , Storyboarded{
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        fetchData()
     }
     
     func setupUI(){
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.tableFooterView = .none
         registerItemTableViewCell(tableView : tableView)
+        vm?.updateHandler = tableView.reloadData
+    }
+    
+    func fetchData(){
+        vm?.getData()
     }
     
 }
@@ -28,6 +37,7 @@ extension StyleController : UITableViewDelegate , UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ItemTableViewCell.reuseIdentifierAndNibName, for: indexPath) as! ItemTableViewCell
+        cell.vm = vm?.stylesArray[indexPath.row]
         return cell
     }
 }

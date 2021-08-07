@@ -15,6 +15,7 @@ class ItemTableViewCell: UITableViewCell {
         }
     }
     
+    @IBOutlet weak var backView: UIView!
     @IBOutlet weak var itemNameLbl: UILabel!
     @IBOutlet weak var itemImageView: UIImageView!
     @IBOutlet weak var stackView: UIStackView!
@@ -34,12 +35,12 @@ class ItemTableViewCell: UITableViewCell {
         }
     }
     private func setupUI(){
-        self.layer.cornerRadius = 4
+        backView.layer.cornerRadius = 4
         addShadow()
     }
     private func addShadow(){
-        self.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.15)
-        self.layer.shadowOffset = CGSize.init(width: 0, height: 1)
-        self.layer.shadowRadius = 4
+        backView.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.15)
+        backView.layer.shadowOffset = CGSize.init(width: 0, height: 1)
+        backView.layer.shadowRadius = 4
     }
 }

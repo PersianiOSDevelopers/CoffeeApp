@@ -15,4 +15,8 @@ struct ItemTableViewCellViewModel {
         self.name = name
         self.image = image
     }
+    init(style : StyleModel){
+        self.name = style.name
+        self.image = UIImage(named: style.name.lowercased())
+    }
 }

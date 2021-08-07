@@ -1,0 +1,19 @@
+//
+//  ExtraServicesTests.swift
+//  CoffeeITTests
+//
+//  Created by Amir Tutunchi on 8/7/21.
+//
+
+import XCTest
+@testable import CoffeeIT
+class ExtraServicesTests: XCTestCase {
+    let sut = ExtraServices()
+    let extraArraySample = [ExtraModel.init(id: "", description: "", subSelections: [SelectionModel.init(id: "aa", name: "sadsa")])]
+    
+    func testSaveAllExtras(){
+        sut.saveAllExtras(extras: extraArraySample)
+        XCTAssertNotNil(sut.userDef?.object(forKey: sut.objectName) as? Data)
+        XCTAssertEqual(sut.userDef?.object(forKey: sut.objectName) as? Data, try? sut.encoder.encode(extraArraySample) )
+    }
+}

@@ -12,12 +12,11 @@ class MainCoordinator: NSObject , Coordinator  , UINavigationControllerDelegate{
     /// starts handling navigation of app and push home controller to navigation controller
     func start() {
         navigationController.setNavigationBarHidden(true, animated: true)
-//        let viewModel = HomeViewModel.init()
-//        let homeController = HomeController.instantiate(storyboradName: "Home", storyboardID: "Home")
-//        homeController.viewModel = viewModel
-//
-//        homeController.coordinator = self
-//        navigationController.pushViewController(homeController, animated: true)
+        let viewModel = StyleViewModel.init()
+        let styleController = StyleController.instantiate(storyboradName: "Style", storyboardID: "Style")
+        styleController.vm = viewModel
+        styleController.coordinator = self
+        navigationController.pushViewController(styleController, animated: true)
     }
     
 }
