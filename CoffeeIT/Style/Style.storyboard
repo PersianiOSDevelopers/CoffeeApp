@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Style Controller-->
+        <scene sceneID="mYk-75-mZH">
+            <objects>
+                <viewController storyboardIdentifier="Style" id="uUi-rn-O3b" customClass="StyleController" customModule="CoffeeIT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fuh-yv-Ids">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brew with Lex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUj-gf-KNB">
+                                <rect key="frame" x="16" y="60" width="109.5" height="22"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your style" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLt-Mq-2jC">
+                                <rect key="frame" x="16" y="90" width="179.5" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kgv-qo-3pv">
+                                <rect key="frame" x="16" y="139" width="382" height="739"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7Qy-AR-erq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DUj-gf-KNB" firstAttribute="leading" secondItem="7Qy-AR-erq" secondAttribute="leading" constant="16" id="3a1-iJ-mWa"/>
+                            <constraint firstItem="DUj-gf-KNB" firstAttribute="top" secondItem="7Qy-AR-erq" secondAttribute="top" constant="16" id="47M-Kc-6tD"/>
+                            <constraint firstItem="7Qy-AR-erq" firstAttribute="trailing" secondItem="kgv-qo-3pv" secondAttribute="trailing" constant="16" id="5G7-Pd-tzF"/>
+                            <constraint firstItem="gLt-Mq-2jC" firstAttribute="leading" secondItem="7Qy-AR-erq" secondAttribute="leading" constant="16" id="6ba-LM-Z1f"/>
+                            <constraint firstItem="kgv-qo-3pv" firstAttribute="top" secondItem="gLt-Mq-2jC" secondAttribute="bottom" constant="16" id="Gnj-VW-o5s"/>
+                            <constraint firstItem="kgv-qo-3pv" firstAttribute="bottom" secondItem="7Qy-AR-erq" secondAttribute="bottom" constant="16" id="Oax-fc-fJC"/>
+                            <constraint firstItem="kgv-qo-3pv" firstAttribute="leading" secondItem="7Qy-AR-erq" secondAttribute="leading" constant="16" id="gHp-Q3-9Hm"/>
+                            <constraint firstItem="gLt-Mq-2jC" firstAttribute="top" secondItem="DUj-gf-KNB" secondAttribute="bottom" constant="8" id="rkN-Ai-0xR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="kgv-qo-3pv" id="nv4-4f-UGg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eU3-xu-NU0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-159.42028985507247" y="70.982142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
