@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0188433A26BF1FC4009108AE /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0188433926BF1FC4009108AE /* UIViewControllerExtension.swift */; };
+		0188434326BF204F009108AE /* SizeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0188434226BF204F009108AE /* SizeController.swift */; };
+		0188434B26BF2059009108AE /* Size.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0188434A26BF2059009108AE /* Size.storyboard */; };
+		0188435026BF2196009108AE /* SizeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0188434F26BF2196009108AE /* SizeViewModel.swift */; };
 		01F2782426BED98A000B98E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2782326BED98A000B98E8 /* AppDelegate.swift */; };
 		01F2782826BED98A000B98E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2782726BED98A000B98E8 /* ViewController.swift */; };
 		01F2782B26BED98A000B98E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01F2782926BED98A000B98E8 /* Main.storyboard */; };
@@ -60,6 +64,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0188433926BF1FC4009108AE /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		0188434226BF204F009108AE /* SizeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeController.swift; sourceTree = "<group>"; };
+		0188434A26BF2059009108AE /* Size.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Size.storyboard; sourceTree = "<group>"; };
+		0188434F26BF2196009108AE /* SizeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeViewModel.swift; sourceTree = "<group>"; };
 		01F2782026BED98A000B98E8 /* CoffeeIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F2782326BED98A000B98E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01F2782726BED98A000B98E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +134,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0188433826BF1FA7009108AE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0188433926BF1FC4009108AE /* UIViewControllerExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0188434126BF202D009108AE /* Size */ = {
+			isa = PBXGroup;
+			children = (
+				0188434226BF204F009108AE /* SizeController.swift */,
+				0188434A26BF2059009108AE /* Size.storyboard */,
+				0188434F26BF2196009108AE /* SizeViewModel.swift */,
+			);
+			path = Size;
+			sourceTree = "<group>";
+		};
 		01F2781726BED989000B98E8 = {
 			isa = PBXGroup;
 			children = (
@@ -149,12 +175,14 @@
 		01F2782226BED98A000B98E8 /* CoffeeIT */ = {
 			isa = PBXGroup;
 			children = (
+				0188434126BF202D009108AE /* Size */,
 				01F278BE26BEFB3E000B98E8 /* Network */,
 				01F2788C26BEE9BB000B98E8 /* Domain */,
 				01F2787C26BEDFA2000B98E8 /* ItemViewCell */,
 				01F2786C26BEDD06000B98E8 /* Style */,
 				01F2786126BEDA0C000B98E8 /* Coordinator */,
 				01F2785726BED9D8000B98E8 /* Design */,
+				0188433826BF1FA7009108AE /* Extensions */,
 				01F2782326BED98A000B98E8 /* AppDelegate.swift */,
 				01F2782726BED98A000B98E8 /* ViewController.swift */,
 				01F2782926BED98A000B98E8 /* Main.storyboard */,
@@ -395,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01F2786E26BEDD1A000B98E8 /* Style.storyboard in Resources */,
+				0188434B26BF2059009108AE /* Size.storyboard in Resources */,
 				01F2783026BED98B000B98E8 /* LaunchScreen.storyboard in Resources */,
 				01F2782D26BED98B000B98E8 /* Assets.xcassets in Resources */,
 				01F2788326BEDFFA000B98E8 /* ItemTableViewCell.xib in Resources */,
@@ -424,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01F278C726BEFBC7000B98E8 /* Router.swift in Sources */,
+				0188435026BF2196009108AE /* SizeViewModel.swift in Sources */,
 				01F2788826BEE122000B98E8 /* ItemTableViewCellViewModel.swift in Sources */,
 				01F278D726BEFF8F000B98E8 /* SelectionModel.swift in Sources */,
 				01F278A626BEF4CE000B98E8 /* RemoteCoffeeMachineService.swift in Sources */,
@@ -445,9 +475,11 @@
 				01F278DC26BEFFB1000B98E8 /* CoffeeMachineModel.swift in Sources */,
 				01F2787326BEDD2E000B98E8 /* StyleController.swift in Sources */,
 				01F2787826BEDD3E000B98E8 /* StyleViewModel.swift in Sources */,
+				0188433A26BF1FC4009108AE /* UIViewControllerExtension.swift in Sources */,
 				01F2785C26BEDA05000B98E8 /* BackDropView.swift in Sources */,
 				01F2789626BEEF43000B98E8 /* CoffeeMachineRepository.swift in Sources */,
 				01F2785D26BEDA05000B98E8 /* Storyboarded.swift in Sources */,
+				0188434326BF204F009108AE /* SizeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,4 +19,11 @@ class MainCoordinator: NSObject , Coordinator  , UINavigationControllerDelegate{
         navigationController.pushViewController(styleController, animated: true)
     }
     
+    func goToSizes(selectedStyle : StyleModel){
+        let sizeController = SizeController.instantiate(storyboradName: "Size", storyboardID: "Size")
+        let vm = SizeViewModel.init(selectedStyle: selectedStyle)
+        sizeController.vm = vm
+        sizeController.coordinator = self
+        navigationController.pushViewController(sizeController, animated: true)
+    }
 }
