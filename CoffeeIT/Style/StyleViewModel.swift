@@ -1,13 +1,10 @@
-//
-//  StyleViewModel.swift
-//  CoffeeIT
-//
-//  Created by Amir Tutunchi on 8/7/21.
-//
-
 import Foundation
 class StyleViewModel {
     var items = [ItemTableViewCellViewModel]()
+    let sizeRepo : SizeReopository
+    let extraRepo : ExtraReopository
+    let coffeeMachineRepo : CoffeeMachineRepository
+    var updateHandler: () -> Void = {}
     var styles = [StyleModel](){
         didSet{
             items = styles.map{ item in
@@ -15,18 +12,11 @@ class StyleViewModel {
             }
         }
     }
-    let sizeRepo : SizeReopository
-    let extraRepo : ExtraReopository
-    let coffeeMachineRepo : CoffeeMachineRepository
-    
     init(sizeRepo : SizeReopository = SizeServices() , extrarepo : ExtraReopository = ExtraServices() , coffeeMachineRepo : CoffeeMachineRepository = RemoteCoffeeMachineService()){
         self.sizeRepo = sizeRepo
         self.extraRepo = extrarepo
         self.coffeeMachineRepo = coffeeMachineRepo
     }
-    
-    var updateHandler: () -> Void = {}
-    
     func getData(completion : @escaping ()-> Void = {}){
         coffeeMachineRepo.getMenu(machineID: "60ba1ab72e35f2d9c786c610") { [weak self] (res : Result<CoffeeMachineModel, Error>) in
             switch res{

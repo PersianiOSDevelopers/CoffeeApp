@@ -8,7 +8,6 @@ class UnderlinedLabel: UILabel {
             attributedText.addAttribute(.underlineStyle,
                                         value: NSUnderlineStyle.single.rawValue,
                                         range: textRange)
-            // Add other attributes if needed
             self.attributedText = attributedText
         }
     }

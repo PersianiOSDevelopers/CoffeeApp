@@ -2,16 +2,13 @@ import UIKit
 
 class ExtraParentViewModel {
     var section : Int = 0
-
+    let extra : ExtraModel
+    var reloadState : () -> Void = {}
+    
     var isCollapsed = false{
         didSet{
             reloadState()
         }
-    }
-    let extra : ExtraModel
-    var reloadState : () -> Void = {}
-    init(extra : ExtraModel){
-        self.extra = extra
     }
     var name : String{
         return extra.name
@@ -21,5 +18,8 @@ class ExtraParentViewModel {
     }
     var selections : [SelectionModel]{
         return extra.subSelections
+    }
+    init(extra : ExtraModel){
+        self.extra = extra
     }
 }

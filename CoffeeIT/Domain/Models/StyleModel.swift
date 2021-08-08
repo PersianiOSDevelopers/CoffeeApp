@@ -1,10 +1,3 @@
-//
-//  StyleModel.swift
-//  CoffeeIT
-//
-//  Created by Amir Tutunchi on 8/7/21.
-//
-
 import Foundation
 struct StyleModel : Codable {
     let id : String

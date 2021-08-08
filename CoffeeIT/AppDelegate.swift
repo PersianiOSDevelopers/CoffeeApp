@@ -1,15 +1,7 @@
-//
-//  AppDelegate.swift
-//  CoffeeIT
-//
-//  Created by Amir Tutunchi on 8/7/21.
-//
-
 import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
     var coordinator: MainCoordinator?
 
@@ -18,15 +10,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navController.isNavigationBarHidden = true
         coordinator = MainCoordinator.init(navigationController: navController)
         coordinator?.start()
-        
         // create a basic uiwindow and activate it here
         window = UIWindow.init(frame: UIScreen.main.bounds)
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
         return true
     }
-
-
-
 }
 

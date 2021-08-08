@@ -9,7 +9,6 @@ class MainCoordinator: NSObject , Coordinator  , UINavigationControllerDelegate{
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
-    
     /// starts handling navigation of app and push home controller to navigation controller
     func start() {
         navigationController.setNavigationBarHidden(true, animated: true)

@@ -1,21 +1,10 @@
-//
-//  ServiceLayer.swift
-//  ManualNetworking
-//
-//  Created by Amir Tutunchi on 9/29/19.
-//  Copyright © 2019 kasra. All rights reserved.
-//
-
 import Foundation
 import UIKit
-
-typealias Parameters = [String: String]
-
-
 class ServiceLayer  {
     private var session : URLSession!
     private let decoder = JSONDecoder()
     static let sharedInstance = ServiceLayer()
+    
     private init() {
         /// create and config urlsession configuration
         let config = URLSessionConfiguration.default
@@ -24,13 +13,9 @@ class ServiceLayer  {
         /// create and config urlsession
         self.session = URLSession(configuration: config, delegate: nil, delegateQueue: .main)
     }
-    
-    
     /// this function is used to validate server response and check whether every thing is ok or not
     private func validate(response : HTTPURLResponse? , data : Data?) throws -> Data{
         let errorResponse = data.flatMap( {try? decoder.decode(ErrorResponse.self, from: $0)})
-//        let a = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments)
-//        print(a)
         guard let response = response else {
             throw ServiceError.invalidResponse
         }
@@ -38,7 +23,6 @@ class ServiceLayer  {
         case 401:
             throw  ServiceError.badToken(message: errorResponse?.message)
         case 400...600:
-//            GenearalAlertManager.showAlert(title: "Error", message: errorResponse?.message ?? "")
             throw ServiceError.badHTTPStatus(status: response.statusCode, message: errorResponse?.message)
         default:
             break

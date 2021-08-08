@@ -1,5 +1,3 @@
-
-
 import Foundation
 enum ServiceError : LocalizedError{
     case badHTTPStatus(status : Int , message : String?)

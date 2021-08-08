@@ -4,6 +4,7 @@ class ScanController: UIViewController , Storyboarded {
     weak var coordinator : MainCoordinator?
     @IBOutlet weak var underLineLbl: UnderlinedLabel!
     @IBOutlet weak var machineImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()

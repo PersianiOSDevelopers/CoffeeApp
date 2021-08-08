@@ -1,24 +1,15 @@
-//
-//  ExtraViewModel.swift
-//  CoffeeIT
-//
-//  Created by Amir Tutunchi on 8/8/21.
-//
-
 import Foundation
 
 class ExtraViewModel{
     let extraRepo : ExtraReopository
     let selectedStyle : StyleModel
     var updateHandler: () -> Void = {}
-
+    var extraArray = [ExtraParentViewModel]()
+    
     init(selectedStyle : StyleModel , extraRepo : ExtraReopository = ExtraServices()){
         self.extraRepo = extraRepo
         self.selectedStyle = selectedStyle
     }
-    
-    var extraArray = [ExtraParentViewModel]()
-    
     func getData(){
         extraArray = []
         for item in selectedStyle.extras{

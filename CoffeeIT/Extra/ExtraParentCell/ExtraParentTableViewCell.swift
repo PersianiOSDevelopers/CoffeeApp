@@ -1,32 +1,27 @@
-//
-//  SelectExtraTableViewCell.swift
-//  CoffeeIT
-//
-//  Created by kdeveloper1 on 8/8/21.
-//
-
 import UIKit
 
 class ExtraParentTableViewCell: UITableViewCell {
-    @IBOutlet weak var backView: UIView!
     static let reuseIdentifier = "SelectExtraTableViewCell"
     var indexPath : IndexPath!
+    @IBOutlet weak var backView: UIView!
     @IBOutlet weak var itemNameLbl: UILabel!
     @IBOutlet weak var itemImageView: UIImageView!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var innerStackView: UIStackView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var lineView: UIView!
-    weak var parent : ExtraController?
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    var reloadDelegate : ReloadTableViewIndexPathDelegate?
+    static var nib: UINib {
+        return UINib(nibName: String(describing: self), bundle: .main)
     }
-
     var vm : ExtraParentViewModel?{
         didSet{
             loadData()
         }
+    }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
     }
     func loadData(){
         if let vm = vm{
@@ -42,10 +37,6 @@ class ExtraParentTableViewCell: UITableViewCell {
             setupUI()
         }
     }
-    static var nib: UINib {
-        return UINib(nibName: String(describing: self), bundle: .main)
-    }
-    
     private func setupUI(){
         let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(cell_Tapped))
         self.addGestureRecognizer(tapGesture)
@@ -64,7 +55,7 @@ class ExtraParentTableViewCell: UITableViewCell {
             lineView.isHidden = true
         }
         tableView.reloadData()
-        parent?.tableView.reloadRows(at: [indexPath], with: .automatic)
+        reloadDelegate?.reloadAt(indexPath : indexPath)
     }
     @objc func cell_Tapped(){
         vm?.isCollapsed.toggle()
@@ -75,11 +66,11 @@ class ExtraParentTableViewCell: UITableViewCell {
         self.backView.layer.shadowRadius = 4
     }
 }
+
 extension ExtraParentTableViewCell : UITableViewDelegate , UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return vm?.selections.count ?? 0
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ExtraChildTableViewCell.reuseAndNibIdentifier, for: indexPath) as! ExtraChildTableViewCell
         if let selection = vm?.selections[indexPath.row]{
@@ -87,6 +78,8 @@ extension ExtraParentTableViewCell : UITableViewDelegate , UITableViewDataSource
         }
         return cell
     }
-    
 }
 
+protocol ReloadTableViewIndexPathDelegate {
+    func reloadAt(indexPath : IndexPath)
+}

@@ -1,14 +1,6 @@
-//
-//  ExtraController.swift
-//  CoffeeIT
-//
-//  Created by Amir Tutunchi on 8/8/21.
-//
-
 import UIKit
 
 class ExtraController: UIViewController , Storyboarded {
-
     var vm : ExtraViewModel?
     weak var coordinator : MainCoordinator!
     @IBOutlet weak var tableView: UITableView!
@@ -45,7 +37,7 @@ extension ExtraController : UITableViewDelegate , UITableViewDataSource{
         if let extra = vm?.extraArray[indexPath.row]{
             cell.vm = extra
         }
-        cell.parent = self
+        cell.reloadDelegate = self
         cell.indexPath = indexPath
         return cell
     }
@@ -58,5 +50,11 @@ extension ExtraController : UITableViewDelegate , UITableViewDataSource{
         }else{
             return 110
         }
+    }
+}
+
+extension ExtraController : ReloadTableViewIndexPathDelegate{
+    func reloadAt(indexPath: IndexPath) {
+        tableView.reloadRows(at: [indexPath], with: .automatic)
     }
 }

@@ -1,10 +1,3 @@
-//
-//  ExtraServices.swift
-//  CoffeeIT
-//
-//  Created by Amir Tutunchi on 8/7/21.
-//
-
 import Foundation
 class ExtraServices : ExtraReopository{
     let objectName = "extraObject"
@@ -20,7 +13,6 @@ class ExtraServices : ExtraReopository{
         }
         return nil
     }
-    
     func saveAllExtras(extras: [ExtraModel]) {
         if let encodeObject = try? encoder.encode(extras){
             userDef?.set(encodeObject, forKey: objectName)
