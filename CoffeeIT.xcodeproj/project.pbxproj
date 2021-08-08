@@ -17,6 +17,8 @@
 		01A462AE26C03077005E9A74 /* ScanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A462AD26C03077005E9A74 /* ScanController.swift */; };
 		01A462B326C03096005E9A74 /* Scan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A462B226C03096005E9A74 /* Scan.storyboard */; };
 		01A462B826C036B7005E9A74 /* UnderLinedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A462B726C036B7005E9A74 /* UnderLinedLabel.swift */; };
+		01A462DC26C05CAB005E9A74 /* SizeServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A462DB26C05CAB005E9A74 /* SizeServicesTests.swift */; };
+		01A462E126C05DB9005E9A74 /* ItemViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A462E026C05DB8005E9A74 /* ItemViewModelTests.swift */; };
 		01B71D4226BF7D000099FA34 /* ExtraChildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B71D4126BF7D000099FA34 /* ExtraChildTableViewCell.swift */; };
 		01B71D4826BF7FEF0099FA34 /* SimpleCheckbox in Frameworks */ = {isa = PBXBuildFile; productRef = 01B71D4726BF7FEF0099FA34 /* SimpleCheckbox */; };
 		01B71D5226BF87AD0099FA34 /* ExtraChildViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B71D5126BF87AD0099FA34 /* ExtraChildViewModel.swift */; };
@@ -74,6 +76,8 @@
 		01A462AD26C03077005E9A74 /* ScanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanController.swift; sourceTree = "<group>"; };
 		01A462B226C03096005E9A74 /* Scan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scan.storyboard; sourceTree = "<group>"; };
 		01A462B726C036B7005E9A74 /* UnderLinedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderLinedLabel.swift; sourceTree = "<group>"; };
+		01A462DB26C05CAB005E9A74 /* SizeServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeServicesTests.swift; sourceTree = "<group>"; };
+		01A462E026C05DB8005E9A74 /* ItemViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModelTests.swift; sourceTree = "<group>"; };
 		01B71D4126BF7D000099FA34 /* ExtraChildTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraChildTableViewCell.swift; sourceTree = "<group>"; };
 		01B71D5126BF87AD0099FA34 /* ExtraChildViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraChildViewModel.swift; sourceTree = "<group>"; };
 		01F2782026BED98A000B98E8 /* CoffeeIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +175,14 @@
 			path = Scan;
 			sourceTree = "<group>";
 		};
+		01A462DF26C05D84005E9A74 /* ItemViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				01A462E026C05DB8005E9A74 /* ItemViewModelTests.swift */,
+			);
+			path = ItemViewCell;
+			sourceTree = "<group>";
+		};
 		01B71D5726BF96980099FA34 /* ExtraChildCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +234,7 @@
 		01F2783926BED98B000B98E8 /* CoffeeITTests */ = {
 			isa = PBXGroup;
 			children = (
+				01A462DF26C05D84005E9A74 /* ItemViewCell */,
 				01F278B426BEF823000B98E8 /* Domain */,
 				01F2783C26BED98B000B98E8 /* Info.plist */,
 			);
@@ -322,6 +335,7 @@
 			isa = PBXGroup;
 			children = (
 				01F278B626BEF853000B98E8 /* ExtraServicesTests.swift */,
+				01A462DB26C05CAB005E9A74 /* SizeServicesTests.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -497,7 +511,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01A462DC26C05CAB005E9A74 /* SizeServicesTests.swift in Sources */,
 				01F278B726BEF853000B98E8 /* ExtraServicesTests.swift in Sources */,
+				01A462E126C05DB9005E9A74 /* ItemViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
