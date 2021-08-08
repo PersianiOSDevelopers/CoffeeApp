@@ -33,7 +33,7 @@
 		01F2787826BEDD3E000B98E8 /* StyleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2787726BEDD3E000B98E8 /* StyleViewModel.swift */; };
 		01F2787E26BEDFC0000B98E8 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2787D26BEDFC0000B98E8 /* ItemTableViewCell.swift */; };
 		01F2788326BEDFFA000B98E8 /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F2788226BEDFFA000B98E8 /* ItemTableViewCell.xib */; };
-		01F2788826BEE122000B98E8 /* ItemTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2788726BEE122000B98E8 /* ItemTableViewCellViewModel.swift */; };
+		01F2788826BEE122000B98E8 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2788726BEE122000B98E8 /* ItemViewModel.swift */; };
 		01F2788F26BEEA18000B98E8 /* StyleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2788E26BEEA18000B98E8 /* StyleModel.swift */; };
 		01F2789626BEEF43000B98E8 /* CoffeeMachineRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2789526BEEF43000B98E8 /* CoffeeMachineRepository.swift */; };
 		01F2789C26BEEFBF000B98E8 /* SizeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2789B26BEEFBE000B98E8 /* SizeRepository.swift */; };
@@ -93,7 +93,7 @@
 		01F2787726BEDD3E000B98E8 /* StyleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleViewModel.swift; sourceTree = "<group>"; };
 		01F2787D26BEDFC0000B98E8 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		01F2788226BEDFFA000B98E8 /* ItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
-		01F2788726BEE122000B98E8 /* ItemTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		01F2788726BEE122000B98E8 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
 		01F2788E26BEEA18000B98E8 /* StyleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleModel.swift; sourceTree = "<group>"; };
 		01F2789526BEEF43000B98E8 /* CoffeeMachineRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeMachineRepository.swift; sourceTree = "<group>"; };
 		01F2789B26BEEFBE000B98E8 /* SizeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeRepository.swift; sourceTree = "<group>"; };
@@ -263,7 +263,7 @@
 			children = (
 				01F2787D26BEDFC0000B98E8 /* ItemTableViewCell.swift */,
 				01F2788226BEDFFA000B98E8 /* ItemTableViewCell.xib */,
-				01F2788726BEE122000B98E8 /* ItemTableViewCellViewModel.swift */,
+				01F2788726BEE122000B98E8 /* ItemViewModel.swift */,
 			);
 			path = ItemViewCell;
 			sourceTree = "<group>";
@@ -458,7 +458,7 @@
 				01F278C726BEFBC7000B98E8 /* Router.swift in Sources */,
 				01B71D5226BF87AD0099FA34 /* ExtraChildViewModel.swift in Sources */,
 				0188435026BF2196009108AE /* SizeViewModel.swift in Sources */,
-				01F2788826BEE122000B98E8 /* ItemTableViewCellViewModel.swift in Sources */,
+				01F2788826BEE122000B98E8 /* ItemViewModel.swift in Sources */,
 				01F278D726BEFF8F000B98E8 /* SelectionModel.swift in Sources */,
 				01F278A626BEF4CE000B98E8 /* RemoteCoffeeMachineService.swift in Sources */,
 				01A462B826C036B7005E9A74 /* UnderLinedLabel.swift in Sources */,

@@ -1,5 +1,6 @@
 import UIKit
 
+/// this table view cell used for displaying an Extra model object inside this table view cell there is a table view for showing selections of the Extra model
 class ExtraParentTableViewCell: UITableViewCell {
     static let reuseIdentifier = "SelectExtraTableViewCell"
     var indexPath : IndexPath!
@@ -11,6 +12,8 @@ class ExtraParentTableViewCell: UITableViewCell {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var lineView: UIView!
     var reloadDelegate : ReloadTableViewIndexPathDelegate?
+    var selectedItem : ExtraChildViewModel?
+    
     static var nib: UINib {
         return UINib(nibName: String(describing: self), bundle: .main)
     }
@@ -18,10 +21,6 @@ class ExtraParentTableViewCell: UITableViewCell {
         didSet{
             loadData()
         }
-    }
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
     }
     func loadData(){
         if let vm = vm{
@@ -32,19 +31,24 @@ class ExtraParentTableViewCell: UITableViewCell {
             }else{
                 itemImageView.isHidden = true
             }
-            showState()
-            vm.reloadState = showState
             setupUI()
         }
     }
-    private func setupUI(){
+    private func addTapGesture() {
         let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(cell_Tapped))
         self.addGestureRecognizer(tapGesture)
+    }
+    fileprivate func registerTableViewDelegates() {
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    private func setupUI(){
+        addTapGesture()
+        registerTableViewDelegates()
         vm?.reloadState = showState
         addShadow()
         backView.layer.cornerRadius = 4
+        showState()
     }
     func showState(){
         if vm?.isCollapsed ?? false{
@@ -75,11 +79,26 @@ extension ExtraParentTableViewCell : UITableViewDelegate , UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: ExtraChildTableViewCell.reuseAndNibIdentifier, for: indexPath) as! ExtraChildTableViewCell
         if let selection = vm?.selections[indexPath.row]{
             cell.vm = ExtraChildViewModel.init(selection: selection)
+            if selectedItem?.selection.id == selection.id{
+                cell.checkBox.isChecked = true
+            }else{
+                cell.checkBox.isChecked = false
+            }
         }
+        cell.checkboxDelegate = self
         return cell
     }
 }
-
+extension ExtraParentTableViewCell : SelectCheckBoxDelegate{
+    func selectCheckBoxAt(vm : ExtraChildViewModel, state: Bool) {
+        if state {
+            selectedItem = vm
+            tableView.reloadData()
+        }else{
+            selectedItem = nil
+        }
+    }
+}
 protocol ReloadTableViewIndexPathDelegate {
     func reloadAt(indexPath : IndexPath)
 }

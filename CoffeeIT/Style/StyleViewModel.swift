@@ -1,6 +1,6 @@
 import Foundation
 class StyleViewModel {
-    var items = [ItemTableViewCellViewModel]()
+    var items = [ItemViewModel]()
     let sizeRepo : SizeReopository
     let extraRepo : ExtraReopository
     let coffeeMachineRepo : CoffeeMachineRepository
@@ -8,7 +8,7 @@ class StyleViewModel {
     var styles = [StyleModel](){
         didSet{
             items = styles.map{ item in
-                ItemTableViewCellViewModel.init(style: item)
+                ItemViewModel.init(style: item)
             }
         }
     }

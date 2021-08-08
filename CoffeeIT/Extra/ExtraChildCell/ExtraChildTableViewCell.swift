@@ -6,7 +6,8 @@ class ExtraChildTableViewCell: UITableViewCell {
     @IBOutlet weak var checkBox: Checkbox!
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var centerView: UIView!
-    
+    var checkboxDelegate : SelectCheckBoxDelegate?
+    var indexPath : IndexPath?
     var vm : ExtraChildViewModel?{
         didSet{
             loadData()
@@ -18,7 +19,9 @@ class ExtraChildTableViewCell: UITableViewCell {
         }
     }
     @IBAction func checkBox_Tapped(_ sender: Checkbox) {
-        
+        if let vm = vm{
+            checkboxDelegate?.selectCheckBoxAt(vm : vm , state: sender.isChecked)
+        }
     }
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,4 +37,6 @@ class ExtraChildTableViewCell: UITableViewCell {
     }
 }
 
-
+protocol SelectCheckBoxDelegate {
+    func selectCheckBoxAt(vm : ExtraChildViewModel , state : Bool)
+}

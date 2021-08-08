@@ -1,7 +1,6 @@
 import UIKit
 
 class ExtraParentViewModel {
-    var section : Int = 0
     let extra : ExtraModel
     var reloadState : () -> Void = {}
     
