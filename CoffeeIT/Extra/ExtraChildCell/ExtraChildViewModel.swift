@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct ExtraCellViewModel {
+struct ExtraChildViewModel {
     let selection : SelectionModel
     var name : String{
         return selection.name

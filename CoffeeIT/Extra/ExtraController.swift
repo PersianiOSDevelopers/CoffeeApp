@@ -41,7 +41,7 @@ extension ExtraController : UITableViewDelegate , UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: SelectExtraTableViewCell.reuseIdentifier, for: indexPath) as! SelectExtraTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: ExtraParentTableViewCell.reuseIdentifier, for: indexPath) as! ExtraParentTableViewCell
         if let extra = vm?.extraArray[indexPath.row]{
             cell.vm = extra
         }

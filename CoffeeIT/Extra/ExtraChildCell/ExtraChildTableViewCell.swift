@@ -8,9 +8,9 @@
 import UIKit
 import SimpleCheckbox
 
-class ExtraTableViewCell: UITableViewCell {
+class ExtraChildTableViewCell: UITableViewCell {
     static let reuseAndNibIdentifier = "ExtraTableViewCell"
-    var vm : ExtraCellViewModel?{
+    var vm : ExtraChildViewModel?{
         didSet{
             loadData()
         }

@@ -17,9 +17,9 @@
 		01A462AE26C03077005E9A74 /* ScanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A462AD26C03077005E9A74 /* ScanController.swift */; };
 		01A462B326C03096005E9A74 /* Scan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A462B226C03096005E9A74 /* Scan.storyboard */; };
 		01A462B826C036B7005E9A74 /* UnderLinedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A462B726C036B7005E9A74 /* UnderLinedLabel.swift */; };
-		01B71D4226BF7D000099FA34 /* ExtraTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B71D4126BF7D000099FA34 /* ExtraTableViewCell.swift */; };
+		01B71D4226BF7D000099FA34 /* ExtraChildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B71D4126BF7D000099FA34 /* ExtraChildTableViewCell.swift */; };
 		01B71D4826BF7FEF0099FA34 /* SimpleCheckbox in Frameworks */ = {isa = PBXBuildFile; productRef = 01B71D4726BF7FEF0099FA34 /* SimpleCheckbox */; };
-		01B71D5226BF87AD0099FA34 /* ExtraCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B71D5126BF87AD0099FA34 /* ExtraCellViewModel.swift */; };
+		01B71D5226BF87AD0099FA34 /* ExtraChildViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B71D5126BF87AD0099FA34 /* ExtraChildViewModel.swift */; };
 		01F2782426BED98A000B98E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2782326BED98A000B98E8 /* AppDelegate.swift */; };
 		01F2782826BED98A000B98E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F2782726BED98A000B98E8 /* ViewController.swift */; };
 		01F2782B26BED98A000B98E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01F2782926BED98A000B98E8 /* Main.storyboard */; };
@@ -53,8 +53,8 @@
 		01F278D226BEFF75000B98E8 /* ExtraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F278D126BEFF75000B98E8 /* ExtraModel.swift */; };
 		01F278D726BEFF8F000B98E8 /* SelectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F278D626BEFF8F000B98E8 /* SelectionModel.swift */; };
 		01F278DC26BEFFB1000B98E8 /* CoffeeMachineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F278DB26BEFFB1000B98E8 /* CoffeeMachineModel.swift */; };
-		41B8858B26C0147E0080E707 /* SelectExtraTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B8858A26C0147E0080E707 /* SelectExtraTableViewCell.swift */; };
-		41B8859026C0149E0080E707 /* SelectExtraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B8858F26C0149E0080E707 /* SelectExtraViewModel.swift */; };
+		41B8858B26C0147E0080E707 /* ExtraParentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B8858A26C0147E0080E707 /* ExtraParentTableViewCell.swift */; };
+		41B8859026C0149E0080E707 /* ExtraParentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B8858F26C0149E0080E707 /* ExtraParentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,8 +85,8 @@
 		01A462AD26C03077005E9A74 /* ScanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanController.swift; sourceTree = "<group>"; };
 		01A462B226C03096005E9A74 /* Scan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scan.storyboard; sourceTree = "<group>"; };
 		01A462B726C036B7005E9A74 /* UnderLinedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderLinedLabel.swift; sourceTree = "<group>"; };
-		01B71D4126BF7D000099FA34 /* ExtraTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraTableViewCell.swift; sourceTree = "<group>"; };
-		01B71D5126BF87AD0099FA34 /* ExtraCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraCellViewModel.swift; sourceTree = "<group>"; };
+		01B71D4126BF7D000099FA34 /* ExtraChildTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraChildTableViewCell.swift; sourceTree = "<group>"; };
+		01B71D5126BF87AD0099FA34 /* ExtraChildViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraChildViewModel.swift; sourceTree = "<group>"; };
 		01F2782026BED98A000B98E8 /* CoffeeIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01F2782326BED98A000B98E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01F2782726BED98A000B98E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,8 +126,8 @@
 		01F278D126BEFF75000B98E8 /* ExtraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraModel.swift; sourceTree = "<group>"; };
 		01F278D626BEFF8F000B98E8 /* SelectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionModel.swift; sourceTree = "<group>"; };
 		01F278DB26BEFFB1000B98E8 /* CoffeeMachineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeMachineModel.swift; sourceTree = "<group>"; };
-		41B8858A26C0147E0080E707 /* SelectExtraTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectExtraTableViewCell.swift; sourceTree = "<group>"; };
-		41B8858F26C0149E0080E707 /* SelectExtraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectExtraViewModel.swift; sourceTree = "<group>"; };
+		41B8858A26C0147E0080E707 /* ExtraParentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraParentTableViewCell.swift; sourceTree = "<group>"; };
+		41B8858F26C0149E0080E707 /* ExtraParentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraParentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,8 +177,8 @@
 		01925D2B26BF75FA00DA8282 /* Extra */ = {
 			isa = PBXGroup;
 			children = (
-				41B8858926C014490080E707 /* ExtraCell */,
-				01B71D5726BF96980099FA34 /* SelectionCell */,
+				41B8858926C014490080E707 /* ExtraParentCell */,
+				01B71D5726BF96980099FA34 /* ExtraChildCell */,
 				01925D2C26BF761300DA8282 /* ExtraController.swift */,
 				01925D3426BF761D00DA8282 /* Extra.storyboard */,
 				01925D3926BF762D00DA8282 /* ExtraViewModel.swift */,
@@ -195,13 +195,13 @@
 			path = Scan;
 			sourceTree = "<group>";
 		};
-		01B71D5726BF96980099FA34 /* SelectionCell */ = {
+		01B71D5726BF96980099FA34 /* ExtraChildCell */ = {
 			isa = PBXGroup;
 			children = (
-				01B71D4126BF7D000099FA34 /* ExtraTableViewCell.swift */,
-				01B71D5126BF87AD0099FA34 /* ExtraCellViewModel.swift */,
+				01B71D4126BF7D000099FA34 /* ExtraChildTableViewCell.swift */,
+				01B71D5126BF87AD0099FA34 /* ExtraChildViewModel.swift */,
 			);
-			path = SelectionCell;
+			path = ExtraChildCell;
 			sourceTree = "<group>";
 		};
 		01F2781726BED989000B98E8 = {
@@ -227,16 +227,16 @@
 		01F2782226BED98A000B98E8 /* CoffeeIT */ = {
 			isa = PBXGroup;
 			children = (
-				01A462AC26C0305C005E9A74 /* Scan */,
+				01F2787C26BEDFA2000B98E8 /* ItemViewCell */,
 				01925D2B26BF75FA00DA8282 /* Extra */,
 				0188434126BF202D009108AE /* Size */,
-				01F278BE26BEFB3E000B98E8 /* Network */,
-				01F2788C26BEE9BB000B98E8 /* Domain */,
-				01F2787C26BEDFA2000B98E8 /* ItemViewCell */,
+				01A462AC26C0305C005E9A74 /* Scan */,
 				01F2786C26BEDD06000B98E8 /* Style */,
 				01F2786126BEDA0C000B98E8 /* Coordinator */,
 				01F2785726BED9D8000B98E8 /* Design */,
 				0188433826BF1FA7009108AE /* Extensions */,
+				01F2788C26BEE9BB000B98E8 /* Domain */,
+				01F278BE26BEFB3E000B98E8 /* Network */,
 				01F2782326BED98A000B98E8 /* AppDelegate.swift */,
 				01F2782726BED98A000B98E8 /* ViewController.swift */,
 				01F2782926BED98A000B98E8 /* Main.storyboard */,
@@ -374,13 +374,13 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		41B8858926C014490080E707 /* ExtraCell */ = {
+		41B8858926C014490080E707 /* ExtraParentCell */ = {
 			isa = PBXGroup;
 			children = (
-				41B8858A26C0147E0080E707 /* SelectExtraTableViewCell.swift */,
-				41B8858F26C0149E0080E707 /* SelectExtraViewModel.swift */,
+				41B8858A26C0147E0080E707 /* ExtraParentTableViewCell.swift */,
+				41B8858F26C0149E0080E707 /* ExtraParentViewModel.swift */,
 			);
-			path = ExtraCell;
+			path = ExtraParentCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -525,7 +525,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01F278C726BEFBC7000B98E8 /* Router.swift in Sources */,
-				01B71D5226BF87AD0099FA34 /* ExtraCellViewModel.swift in Sources */,
+				01B71D5226BF87AD0099FA34 /* ExtraChildViewModel.swift in Sources */,
 				0188435026BF2196009108AE /* SizeViewModel.swift in Sources */,
 				01F2788826BEE122000B98E8 /* ItemTableViewCellViewModel.swift in Sources */,
 				01F278D726BEFF8F000B98E8 /* SelectionModel.swift in Sources */,
@@ -549,16 +549,16 @@
 				01F278C426BEFBC7000B98E8 /* ServiceLayer.swift in Sources */,
 				01A462AE26C03077005E9A74 /* ScanController.swift in Sources */,
 				01F278DC26BEFFB1000B98E8 /* CoffeeMachineModel.swift in Sources */,
-				41B8858B26C0147E0080E707 /* SelectExtraTableViewCell.swift in Sources */,
+				41B8858B26C0147E0080E707 /* ExtraParentTableViewCell.swift in Sources */,
 				01F2787326BEDD2E000B98E8 /* StyleController.swift in Sources */,
 				01F2787826BEDD3E000B98E8 /* StyleViewModel.swift in Sources */,
 				0188433A26BF1FC4009108AE /* UIViewControllerExtension.swift in Sources */,
 				01F2785C26BEDA05000B98E8 /* BackDropView.swift in Sources */,
-				01B71D4226BF7D000099FA34 /* ExtraTableViewCell.swift in Sources */,
+				01B71D4226BF7D000099FA34 /* ExtraChildTableViewCell.swift in Sources */,
 				01F2789626BEEF43000B98E8 /* CoffeeMachineRepository.swift in Sources */,
 				01F2785D26BEDA05000B98E8 /* Storyboarded.swift in Sources */,
 				01925D2D26BF761300DA8282 /* ExtraController.swift in Sources */,
-				41B8859026C0149E0080E707 /* SelectExtraViewModel.swift in Sources */,
+				41B8859026C0149E0080E707 /* ExtraParentViewModel.swift in Sources */,
 				0188434326BF204F009108AE /* SizeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SelectExtraTableViewCell: UITableViewCell {
+class ExtraParentTableViewCell: UITableViewCell {
     @IBOutlet weak var backView: UIView!
     static let reuseIdentifier = "SelectExtraTableViewCell"
     var indexPath : IndexPath!
@@ -23,7 +23,7 @@ class SelectExtraTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    var vm : SelectExtraViewModel?{
+    var vm : ExtraParentViewModel?{
         didSet{
             loadData()
         }
@@ -75,17 +75,18 @@ class SelectExtraTableViewCell: UITableViewCell {
         self.backView.layer.shadowRadius = 4
     }
 }
-extension SelectExtraTableViewCell : UITableViewDelegate , UITableViewDataSource{
+extension ExtraParentTableViewCell : UITableViewDelegate , UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return vm?.selections.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ExtraTableViewCell.reuseAndNibIdentifier, for: indexPath) as! ExtraTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: ExtraChildTableViewCell.reuseAndNibIdentifier, for: indexPath) as! ExtraChildTableViewCell
         if let selection = vm?.selections[indexPath.row]{
-            cell.vm = ExtraCellViewModel.init(selection: selection)
+            cell.vm = ExtraChildViewModel.init(selection: selection)
         }
         return cell
     }
     
 }
+

@@ -1,6 +1,6 @@
 import UIKit
 
-class SelectExtraViewModel {
+class ExtraParentViewModel {
     var section : Int = 0
 
     var isCollbsed = false{

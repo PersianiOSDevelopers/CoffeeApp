@@ -31,7 +31,6 @@ class StyleController: UIViewController  , Storyboarded{
             self.stopLoading()
         })
     }
-    
 }
 extension StyleController : UITableViewDelegate , UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
