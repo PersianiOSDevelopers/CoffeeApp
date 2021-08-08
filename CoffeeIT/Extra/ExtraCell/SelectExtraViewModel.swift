@@ -1,22 +1,15 @@
-//
-//  ExtraHeaderViewModel.swift
-//  CoffeeIT
-//
-//  Created by Amir Tutunchi on 8/8/21.
-//
-
 import UIKit
 
-class ExtraHeaderViewModel {
+class SelectExtraViewModel {
     var section : Int = 0
 
     var isCollbsed = false{
         didSet{
-            reloadSection(section)
+            reloadState()
         }
     }
     let extra : ExtraModel
-    var reloadSection : (_ secion : Int) -> Void = {_ in }
+    var reloadState : () -> Void = {}
     init(extra : ExtraModel){
         self.extra = extra
     }

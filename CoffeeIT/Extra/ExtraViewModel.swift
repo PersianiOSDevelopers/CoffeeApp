@@ -17,13 +17,13 @@ class ExtraViewModel{
         self.selectedStyle = selectedStyle
     }
     
-    var extraArray = [ExtraHeaderViewModel]()
+    var extraArray = [SelectExtraViewModel]()
     
     func getData(){
         extraArray = []
         for item in selectedStyle.extras{
             if let extra = extraRepo.getExtraByID(id: item){
-                extraArray.append(ExtraHeaderViewModel.init(extra: extra))
+                extraArray.append(SelectExtraViewModel.init(extra: extra))
             }
         }
         updateHandler()

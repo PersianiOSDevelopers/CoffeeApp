@@ -25,7 +25,6 @@ class ExtraController: UIViewController , Storyboarded {
         vm?.updateHandler = tableView.reloadData
         let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(back_Tapped))
         backStackView.addGestureRecognizer(tapGesture)
-        registerTableViewCellAndHeader()
     }
     func fetchData(){
         vm?.getData()
@@ -33,49 +32,31 @@ class ExtraController: UIViewController , Storyboarded {
     @objc func back_Tapped(){
         coordinator.navigationController.popViewController(animated: true)
     }
-    func registerTableViewCellAndHeader(){
-        tableView.register(ExtraHeaderView.nib, forHeaderFooterViewReuseIdentifier: ExtraHeaderView.reuseIdentifier)
-        tableView.register(UINib.init(nibName: ExtraTableViewCell.reuseAndNibIdentifier, bundle: .main), forCellReuseIdentifier:  ExtraTableViewCell.reuseAndNibIdentifier)
-    }
-    func reloadTableAtSection(section : Int){
-        print(vm?.extraArray[section].isCollbsed)
-        tableView.reloadSections([section], with: .automatic)
-    }
+   
 }
 extension ExtraController : UITableViewDelegate , UITableViewDataSource{
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return vm?.extraArray.count ?? 0
-    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let vm = vm else {
-            return 0
-        }
-        if vm.extraArray[section].isCollbsed {
-            return vm.extraArray[section].selections.count
-        }else{
-            return 0
-        }
+        return vm?.extraArray.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ExtraTableViewCell.reuseAndNibIdentifier, for: indexPath) as! ExtraTableViewCell
-        if let selection = vm?.extraArray[indexPath.section].selections[indexPath.row]{
-            cell.vm = ExtraCellViewModel.init(selection: selection)
+        let cell = tableView.dequeueReusableCell(withIdentifier: SelectExtraTableViewCell.reuseIdentifier, for: indexPath) as! SelectExtraTableViewCell
+        if let extra = vm?.extraArray[indexPath.row]{
+            cell.vm = extra
         }
+        cell.parent = self
+        cell.indexPath = indexPath
         return cell
     }
-    func tableView(_ tableView: UITableView,
-                   heightForHeaderInSection section: Int) -> CGFloat {
-        return UITableView.automaticDimension
-    }
-    func tableView(_ tableView: UITableView, estimatedHeightForHeaderInSection section: Int) -> CGFloat {
-        return 104
-    }
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: ExtraHeaderView.reuseIdentifier) as! ExtraHeaderView
-        header.vm = vm?.extraArray[section]
-        header.vm?.section = section
-        header.vm?.reloadSection = reloadTableAtSection(section:)
-        return header
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        guard let vm = vm else {
+            return 0
+        }
+        if vm.extraArray[indexPath.row].isCollbsed{
+            return CGFloat(110 + (76 * vm.extraArray[indexPath.row].selections.count) + 24 )
+        }else{
+            return 110
+        }
     }
 }
