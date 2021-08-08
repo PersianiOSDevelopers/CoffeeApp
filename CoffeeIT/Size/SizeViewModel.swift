@@ -5,10 +5,15 @@ class SizeViewModel {
     var updateHandler: () -> Void = {}
     let selectedStyle : StyleModel
     
+    /// initialize  size view model
+    /// - Parameters:
+    ///   - sizeRepo: desired size service implementation
+    ///   - selectedStyle: selected coffee style
     init(sizeRepo :SizeReopository = SizeServices() , selectedStyle : StyleModel ){
         self.selectedStyle = selectedStyle
         self.sizeRepo = sizeRepo
     }
+    /// use this function to retrieve the size of the selected coffee style
     func getSizes() {
         sizesArray = []
         for item in selectedStyle.sizes{

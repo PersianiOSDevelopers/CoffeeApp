@@ -12,13 +12,22 @@ class StyleViewModel {
             }
         }
     }
+    /// initialize style view model with coffee machine repository to get data from server and cache extra items and size of coffees with extra repository and coffee repository
+    /// - Parameters:
+    ///   - sizeRepo: desired size repository implementation
+    ///   - extrarepo: desired extra repository implementation
+    ///   - coffeeMachineRepo: desired coffeemachine repository implementation
     init(sizeRepo : SizeReopository = SizeServices() , extrarepo : ExtraReopository = ExtraServices() , coffeeMachineRepo : CoffeeMachineRepository = RemoteCoffeeMachineService()){
         self.sizeRepo = sizeRepo
         self.extraRepo = extrarepo
         self.coffeeMachineRepo = coffeeMachineRepo
     }
-    func getData(completion : @escaping ()-> Void = {}){
-        coffeeMachineRepo.getMenu(machineID: "60ba1ab72e35f2d9c786c610") { [weak self] (res : Result<CoffeeMachineModel, Error>) in
+    /// get coffee machine data and cache it
+    /// - Parameters:
+    ///   - machineId: machine id (provided for future uses :D)
+    ///   - completion: completion that data received completely
+    func getData(machineId : String = "60ba1ab72e35f2d9c786c610" , completion : @escaping ()-> Void = {}){
+        coffeeMachineRepo.getMenu(machineID: machineId) { [weak self] (res : Result<CoffeeMachineModel, Error>) in
             switch res{
             case.success(let machine):
                 if let extras = machine.extras{

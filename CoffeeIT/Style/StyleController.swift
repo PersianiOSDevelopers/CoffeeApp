@@ -17,6 +17,7 @@ class StyleController: UIViewController  , Storyboarded{
         registerItemTableViewCell(tableView : tableView)
         vm?.updateHandler = tableView.reloadData
     }
+    /// fetch data from the view model and show loading until data receive
     func fetchData(){
         self.startLoading()
         vm?.getData(completion: {

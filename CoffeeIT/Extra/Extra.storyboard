@@ -107,7 +107,7 @@
                                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                                 <subviews>
                                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OFv-UL-BwW">
-                                                                                        <rect key="frame" x="12" y="4" width="326" height="68"/>
+                                                                                        <rect key="frame" x="0.0" y="4" width="350" height="68"/>
                                                                                         <subviews>
                                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cpn-GS-xwd">
                                                                                                 <rect key="frame" x="16" y="24.5" width="36" height="19.5"/>
@@ -116,7 +116,7 @@
                                                                                                 <nil key="highlightedColor"/>
                                                                                             </label>
                                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SsR-DO-4OR" customClass="Checkbox" customModule="SimpleCheckbox">
-                                                                                                <rect key="frame" x="274" y="16" width="36" height="36"/>
+                                                                                                <rect key="frame" x="298" y="16" width="36" height="36"/>
                                                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                                 <constraints>
                                                                                                     <constraint firstAttribute="width" secondItem="SsR-DO-4OR" secondAttribute="height" multiplier="1:1" id="AN6-RC-duE"/>
@@ -140,10 +140,10 @@
                                                                                 </subviews>
                                                                                 <color key="backgroundColor" name="lightGreen"/>
                                                                                 <constraints>
-                                                                                    <constraint firstAttribute="trailing" secondItem="OFv-UL-BwW" secondAttribute="trailing" constant="12" id="Bcx-ME-dz2"/>
+                                                                                    <constraint firstAttribute="trailing" secondItem="OFv-UL-BwW" secondAttribute="trailing" id="Bcx-ME-dz2"/>
                                                                                     <constraint firstItem="OFv-UL-BwW" firstAttribute="top" secondItem="YNd-jR-OGr" secondAttribute="top" constant="4" id="DLz-9V-SIa"/>
                                                                                     <constraint firstAttribute="bottom" secondItem="OFv-UL-BwW" secondAttribute="bottom" constant="4" id="REs-Ki-Zpn"/>
-                                                                                    <constraint firstItem="OFv-UL-BwW" firstAttribute="leading" secondItem="YNd-jR-OGr" secondAttribute="leading" constant="12" id="Zif-xt-LGs"/>
+                                                                                    <constraint firstItem="OFv-UL-BwW" firstAttribute="leading" secondItem="YNd-jR-OGr" secondAttribute="leading" id="Zif-xt-LGs"/>
                                                                                 </constraints>
                                                                             </tableViewCellContentView>
                                                                             <connections>

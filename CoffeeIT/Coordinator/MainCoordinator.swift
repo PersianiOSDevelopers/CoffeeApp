@@ -4,6 +4,7 @@ import UIKit
 class MainCoordinator: NSObject , Coordinator  , UINavigationControllerDelegate{
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
+    /// selected coffee style by user
     var selectedStyle : StyleModel?
     
     init(navigationController: UINavigationController) {

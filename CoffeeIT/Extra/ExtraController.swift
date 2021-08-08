@@ -54,6 +54,8 @@ extension ExtraController : UITableViewDelegate , UITableViewDataSource{
 }
 
 extension ExtraController : ReloadTableViewIndexPathDelegate{
+    /// use this function to reload a specific index path of table view
+    /// - Parameter indexPath: indexPath to reload
     func reloadAt(indexPath: IndexPath) {
         tableView.reloadRows(at: [indexPath], with: .automatic)
     }

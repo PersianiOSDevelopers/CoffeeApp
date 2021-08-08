@@ -13,6 +13,7 @@ class ExtraChildTableViewCell: UITableViewCell {
             loadData()
         }
     }
+    /// load data from view model
     func loadData(){
         if let vm = vm{
             nameLbl.text = vm.name
