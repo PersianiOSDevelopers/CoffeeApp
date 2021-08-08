@@ -8,11 +8,11 @@
 import Foundation
 struct ExtraModel : Codable {
     let id : String
-    let description : String
+    let name : String
     let subSelections : [SelectionModel]
     enum CodingKeys : String , CodingKey{
         case id = "_id"
-        case description = "name"
+        case name
         case subSelections = "subselections"
     }
 }

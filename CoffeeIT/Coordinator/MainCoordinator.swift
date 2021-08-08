@@ -26,4 +26,11 @@ class MainCoordinator: NSObject , Coordinator  , UINavigationControllerDelegate{
         sizeController.coordinator = self
         navigationController.pushViewController(sizeController, animated: true)
     }
+    func goToExtras(selectedStyle : StyleModel){
+        let extraController = ExtraController.instantiate(storyboradName: "Extra", storyboardID: "Extra")
+        let vm = ExtraViewModel.init(selectedStyle: selectedStyle)
+        extraController.vm = vm
+        extraController.coordinator = self
+        navigationController.pushViewController(extraController, animated: true)
+    }
 }

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Extra Controller-->
+        <scene sceneID="Icx-64-EDL">
+            <objects>
+                <viewController storyboardIdentifier="Extra" id="beQ-e0-J7S" customClass="ExtraController" customModule="CoffeeIT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="icu-Zy-Sju">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="mEt-Z8-qie">
+                                <rect key="frame" x="16" y="44" width="129.5" height="22"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector (Stroke)" translatesAutoresizingMaskIntoConstraints="NO" id="sKI-JV-ASd">
+                                        <rect key="frame" x="0.0" y="0.0" width="8" height="22"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brew with Lex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5AH-33-Ycn">
+                                        <rect key="frame" x="20" y="0.0" width="109.5" height="22"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your extra’s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOx-bm-igl">
+                                <rect key="frame" x="16" y="74" width="198.5" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O4z-cK-cTO">
+                                <rect key="frame" x="16" y="123" width="382" height="739"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lgd-Au-lQy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vOx-bm-igl" firstAttribute="top" secondItem="5AH-33-Ycn" secondAttribute="bottom" constant="8" symbolic="YES" id="FNL-cC-Qz4"/>
+                            <constraint firstItem="O4z-cK-cTO" firstAttribute="leading" secondItem="lgd-Au-lQy" secondAttribute="leading" constant="16" id="IAw-zs-FTe"/>
+                            <constraint firstItem="O4z-cK-cTO" firstAttribute="bottom" secondItem="lgd-Au-lQy" secondAttribute="bottom" id="RUW-ef-WlK"/>
+                            <constraint firstItem="O4z-cK-cTO" firstAttribute="top" secondItem="vOx-bm-igl" secondAttribute="bottom" constant="16" id="Wz6-FW-fbQ"/>
+                            <constraint firstItem="mEt-Z8-qie" firstAttribute="leading" secondItem="lgd-Au-lQy" secondAttribute="leading" constant="16" id="bUC-PC-n4A"/>
+                            <constraint firstItem="mEt-Z8-qie" firstAttribute="top" secondItem="lgd-Au-lQy" secondAttribute="top" id="prc-o5-qv8"/>
+                            <constraint firstItem="vOx-bm-igl" firstAttribute="leading" secondItem="lgd-Au-lQy" secondAttribute="leading" constant="16" id="s29-3g-13O"/>
+                            <constraint firstItem="lgd-Au-lQy" firstAttribute="trailing" secondItem="O4z-cK-cTO" secondAttribute="trailing" constant="16" id="t7h-pd-PLl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backStackView" destination="mEt-Z8-qie" id="tU0-kd-duW"/>
+                        <outlet property="tableView" destination="O4z-cK-cTO" id="ujU-E0-mce"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BMr-49-ScL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="327.536231884058" y="68.973214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Vector (Stroke)" width="8" height="14"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

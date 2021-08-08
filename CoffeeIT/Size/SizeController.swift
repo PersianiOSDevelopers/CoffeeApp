@@ -23,9 +23,14 @@ class SizeController: UIViewController , Storyboarded {
         tableView.dataSource = self
         self.registerItemTableViewCell(tableView: tableView)
         vm?.updateHandler = tableView.reloadData
+        let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(back_Tapped))
+        backStackView.addGestureRecognizer(tapGesture)
     }
     func fetchData(){
         vm?.getSizes()
+    }
+    @objc func back_Tapped(){
+        coordinator.navigationController.popViewController(animated: true)
     }
 }
 extension SizeController : UITableViewDelegate , UITableViewDataSource{
@@ -38,6 +43,11 @@ extension SizeController : UITableViewDelegate , UITableViewDataSource{
         cell.vm = vm?.sizesArray[indexPath.row]
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let selectedStyle = vm?.selectedStyle{
+            coordinator?.goToExtras(selectedStyle: selectedStyle)
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     
 }

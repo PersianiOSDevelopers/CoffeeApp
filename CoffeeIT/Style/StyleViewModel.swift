@@ -7,7 +7,14 @@
 
 import Foundation
 class StyleViewModel {
-    var stylesArray = [ItemTableViewCellViewModel]()
+    var items = [ItemTableViewCellViewModel]()
+    var styles = [StyleModel](){
+        didSet{
+            items = styles.map{ item in
+                ItemTableViewCellViewModel.init(style: item)
+            }
+        }
+    }
     let sizeRepo : SizeReopository
     let extraRepo : ExtraReopository
     let coffeeMachineRepo : CoffeeMachineRepository
@@ -30,9 +37,7 @@ class StyleViewModel {
                 if let sizes = machine.sizes{
                     self?.sizeRepo.saveAllSizes(sizes: sizes)
                 }
-                self?.stylesArray = (machine.types ?? []).map{ item in
-                    ItemTableViewCellViewModel.init(style: item)
-                }
+                self?.styles = machine.types ?? []
                 DispatchQueue.main.async {
                     self?.updateHandler()
                 }

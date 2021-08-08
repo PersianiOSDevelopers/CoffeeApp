@@ -8,7 +8,6 @@
 import Foundation
 class SizeViewModel {
     var sizesArray = [ItemTableViewCellViewModel]()
-    var sizeIds = [String]()
     let sizeRepo : SizeReopository
     var updateHandler: () -> Void = {}
     let selectedStyle : StyleModel
@@ -19,7 +18,7 @@ class SizeViewModel {
     
     func getSizes() {
         sizesArray = []
-        for item in sizeIds{
+        for item in selectedStyle.sizes{
             if let selectedSize = sizeRepo.getSizeByID(id: item){
                 sizesArray.append(ItemTableViewCellViewModel.init(size: selectedSize))
             }
