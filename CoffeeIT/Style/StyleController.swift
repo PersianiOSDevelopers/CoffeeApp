@@ -26,7 +26,10 @@ class StyleController: UIViewController  , Storyboarded{
     }
     
     func fetchData(){
-        vm?.getData()
+        self.startLoading()
+        vm?.getData(completion: {
+            self.stopLoading()
+        })
     }
     
 }
@@ -42,8 +45,9 @@ extension StyleController : UITableViewDelegate , UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let selectedStyle = vm?.styles[indexPath.row]{
-            coordinator?.goToSizes(selectedStyle: selectedStyle)
+            coordinator?.selectedStyle = selectedStyle
         }
+        coordinator?.goToScan()
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

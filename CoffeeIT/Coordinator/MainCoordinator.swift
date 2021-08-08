@@ -4,6 +4,7 @@ import UIKit
 class MainCoordinator: NSObject , Coordinator  , UINavigationControllerDelegate{
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
+    var selectedStyle : StyleModel?
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -18,18 +19,26 @@ class MainCoordinator: NSObject , Coordinator  , UINavigationControllerDelegate{
         styleController.coordinator = self
         navigationController.pushViewController(styleController, animated: true)
     }
-    
-    func goToSizes(selectedStyle : StyleModel){
+    func goToScan(){
+        let scanController = ScanController.instantiate(storyboradName: "Scan", storyboardID: "Scan")
+        scanController.coordinator = self
+        navigationController.pushViewController(scanController, animated: true)
+    }
+    func goToSizes(){
         let sizeController = SizeController.instantiate(storyboradName: "Size", storyboardID: "Size")
-        let vm = SizeViewModel.init(selectedStyle: selectedStyle)
-        sizeController.vm = vm
+        if let selectedStyle = selectedStyle {
+            let vm = SizeViewModel.init(selectedStyle: selectedStyle)
+            sizeController.vm = vm
+        }
         sizeController.coordinator = self
         navigationController.pushViewController(sizeController, animated: true)
     }
-    func goToExtras(selectedStyle : StyleModel){
+    func goToExtras(){
         let extraController = ExtraController.instantiate(storyboradName: "Extra", storyboardID: "Extra")
-        let vm = ExtraViewModel.init(selectedStyle: selectedStyle)
-        extraController.vm = vm
+        if let selectedStyle = selectedStyle {
+            let vm = ExtraViewModel.init(selectedStyle: selectedStyle)
+            extraController.vm = vm
+        }
         extraController.coordinator = self
         navigationController.pushViewController(extraController, animated: true)
     }

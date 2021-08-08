@@ -14,6 +14,9 @@
 		01925D2D26BF761300DA8282 /* ExtraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01925D2C26BF761300DA8282 /* ExtraController.swift */; };
 		01925D3526BF761D00DA8282 /* Extra.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01925D3426BF761D00DA8282 /* Extra.storyboard */; };
 		01925D3A26BF762D00DA8282 /* ExtraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01925D3926BF762D00DA8282 /* ExtraViewModel.swift */; };
+		01A462AE26C03077005E9A74 /* ScanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A462AD26C03077005E9A74 /* ScanController.swift */; };
+		01A462B326C03096005E9A74 /* Scan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01A462B226C03096005E9A74 /* Scan.storyboard */; };
+		01A462B826C036B7005E9A74 /* UnderLinedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A462B726C036B7005E9A74 /* UnderLinedLabel.swift */; };
 		01B71D4226BF7D000099FA34 /* ExtraTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B71D4126BF7D000099FA34 /* ExtraTableViewCell.swift */; };
 		01B71D4826BF7FEF0099FA34 /* SimpleCheckbox in Frameworks */ = {isa = PBXBuildFile; productRef = 01B71D4726BF7FEF0099FA34 /* SimpleCheckbox */; };
 		01B71D5226BF87AD0099FA34 /* ExtraCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B71D5126BF87AD0099FA34 /* ExtraCellViewModel.swift */; };
@@ -79,6 +82,9 @@
 		01925D2C26BF761300DA8282 /* ExtraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraController.swift; sourceTree = "<group>"; };
 		01925D3426BF761D00DA8282 /* Extra.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Extra.storyboard; sourceTree = "<group>"; };
 		01925D3926BF762D00DA8282 /* ExtraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraViewModel.swift; sourceTree = "<group>"; };
+		01A462AD26C03077005E9A74 /* ScanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanController.swift; sourceTree = "<group>"; };
+		01A462B226C03096005E9A74 /* Scan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scan.storyboard; sourceTree = "<group>"; };
+		01A462B726C036B7005E9A74 /* UnderLinedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderLinedLabel.swift; sourceTree = "<group>"; };
 		01B71D4126BF7D000099FA34 /* ExtraTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraTableViewCell.swift; sourceTree = "<group>"; };
 		01B71D5126BF87AD0099FA34 /* ExtraCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraCellViewModel.swift; sourceTree = "<group>"; };
 		01F2782026BED98A000B98E8 /* CoffeeIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +186,15 @@
 			path = Extra;
 			sourceTree = "<group>";
 		};
+		01A462AC26C0305C005E9A74 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				01A462AD26C03077005E9A74 /* ScanController.swift */,
+				01A462B226C03096005E9A74 /* Scan.storyboard */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
 		01B71D5726BF96980099FA34 /* SelectionCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +227,7 @@
 		01F2782226BED98A000B98E8 /* CoffeeIT */ = {
 			isa = PBXGroup;
 			children = (
+				01A462AC26C0305C005E9A74 /* Scan */,
 				01925D2B26BF75FA00DA8282 /* Extra */,
 				0188434126BF202D009108AE /* Size */,
 				01F278BE26BEFB3E000B98E8 /* Network */,
@@ -256,6 +272,7 @@
 				01F2785926BEDA05000B98E8 /* BackDropView.swift */,
 				01F2785826BEDA05000B98E8 /* LoadingExtention.swift */,
 				01F2785A26BEDA05000B98E8 /* Storyboarded.swift */,
+				01A462B726C036B7005E9A74 /* UnderLinedLabel.swift */,
 			);
 			path = Design;
 			sourceTree = "<group>";
@@ -478,6 +495,7 @@
 				01F2786E26BEDD1A000B98E8 /* Style.storyboard in Resources */,
 				0188434B26BF2059009108AE /* Size.storyboard in Resources */,
 				01F2783026BED98B000B98E8 /* LaunchScreen.storyboard in Resources */,
+				01A462B326C03096005E9A74 /* Scan.storyboard in Resources */,
 				01F2782D26BED98B000B98E8 /* Assets.xcassets in Resources */,
 				01F2788326BEDFFA000B98E8 /* ItemTableViewCell.xib in Resources */,
 				01925D3526BF761D00DA8282 /* Extra.storyboard in Resources */,
@@ -512,6 +530,7 @@
 				01F2788826BEE122000B98E8 /* ItemTableViewCellViewModel.swift in Sources */,
 				01F278D726BEFF8F000B98E8 /* SelectionModel.swift in Sources */,
 				01F278A626BEF4CE000B98E8 /* RemoteCoffeeMachineService.swift in Sources */,
+				01A462B826C036B7005E9A74 /* UnderLinedLabel.swift in Sources */,
 				01F278B026BEF512000B98E8 /* ExtraServices.swift in Sources */,
 				01F2786426BEDA2E000B98E8 /* CoordinatorProtocol.swift in Sources */,
 				01F278CD26BEFF61000B98E8 /* SizeModel.swift in Sources */,
@@ -528,6 +547,7 @@
 				01F2785B26BEDA05000B98E8 /* LoadingExtention.swift in Sources */,
 				01F2782426BED98A000B98E8 /* AppDelegate.swift in Sources */,
 				01F278C426BEFBC7000B98E8 /* ServiceLayer.swift in Sources */,
+				01A462AE26C03077005E9A74 /* ScanController.swift in Sources */,
 				01F278DC26BEFFB1000B98E8 /* CoffeeMachineModel.swift in Sources */,
 				41B8858B26C0147E0080E707 /* SelectExtraTableViewCell.swift in Sources */,
 				01F2787326BEDD2E000B98E8 /* StyleController.swift in Sources */,

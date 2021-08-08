@@ -44,9 +44,7 @@ extension SizeController : UITableViewDelegate , UITableViewDataSource{
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let selectedStyle = vm?.selectedStyle{
-            coordinator?.goToExtras(selectedStyle: selectedStyle)
-        }
+        coordinator?.goToExtras()
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

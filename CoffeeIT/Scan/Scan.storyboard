@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scan Controller-->
+        <scene sceneID="KjZ-IF-C2N">
+            <objects>
+                <viewController storyboardIdentifier="Scan" id="6LH-Do-kxP" customClass="ScanController" customModule="CoffeeIT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jDy-LD-cGM">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark Roasted Beans" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkN-CK-dEf">
+                                <rect key="frame" x="20" y="52" width="155" height="22"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tab the machine to start" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVW-Q9-7jL">
+                                <rect key="frame" x="20" y="82" width="264" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Machine" translatesAutoresizingMaskIntoConstraints="NO" id="6Um-JV-rx0">
+                                <rect key="frame" x="0.0" y="165.00000000000003" width="390" height="472.66666666666674"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How does this work" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3e-vS-9xp" customClass="UnderlinedLabel" customModule="CoffeeIT" customModuleProvider="target">
+                                <rect key="frame" x="20" y="673.66666666666663" width="144.33333333333334" height="22"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nge-Vi-3qf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Um-JV-rx0" firstAttribute="leading" secondItem="nge-Vi-3qf" secondAttribute="leading" id="DL3-Yv-Bry"/>
+                            <constraint firstItem="dkN-CK-dEf" firstAttribute="leading" secondItem="nge-Vi-3qf" secondAttribute="leading" constant="20" id="KwV-Vv-Xxv"/>
+                            <constraint firstItem="6Um-JV-rx0" firstAttribute="top" secondItem="TVW-Q9-7jL" secondAttribute="bottom" constant="50" id="MSO-n5-3hz"/>
+                            <constraint firstItem="6Um-JV-rx0" firstAttribute="height" secondItem="jDy-LD-cGM" secondAttribute="height" multiplier="0.56" id="R8T-kr-Jdx"/>
+                            <constraint firstItem="TVW-Q9-7jL" firstAttribute="leading" secondItem="dkN-CK-dEf" secondAttribute="leading" id="UQS-UD-mcw"/>
+                            <constraint firstItem="6Um-JV-rx0" firstAttribute="trailing" secondItem="nge-Vi-3qf" secondAttribute="trailing" id="ZJU-qP-Rgi"/>
+                            <constraint firstItem="x3e-vS-9xp" firstAttribute="top" secondItem="6Um-JV-rx0" secondAttribute="bottom" constant="36" id="coA-Lh-WxF"/>
+                            <constraint firstItem="x3e-vS-9xp" firstAttribute="leading" secondItem="nge-Vi-3qf" secondAttribute="leading" constant="20" id="dfa-l7-WA6"/>
+                            <constraint firstItem="dkN-CK-dEf" firstAttribute="top" secondItem="nge-Vi-3qf" secondAttribute="top" constant="8" id="sif-jd-J0U"/>
+                            <constraint firstItem="TVW-Q9-7jL" firstAttribute="top" secondItem="dkN-CK-dEf" secondAttribute="bottom" constant="8" id="tf7-hX-oKQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="machineImageView" destination="6Um-JV-rx0" id="8YV-Ik-9dy"/>
+                        <outlet property="underLineLbl" destination="x3e-vS-9xp" id="ZvI-Ld-LdM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zbp-9E-cxI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="192.75362318840581" y="99.776785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Machine" width="375" height="410"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

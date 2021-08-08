@@ -27,7 +27,7 @@ class StyleViewModel {
     
     var updateHandler: () -> Void = {}
     
-    func getData(){
+    func getData(completion : @escaping ()-> Void = {}){
         coffeeMachineRepo.getMenu(machineID: "60ba1ab72e35f2d9c786c610") { [weak self] (res : Result<CoffeeMachineModel, Error>) in
             switch res{
             case.success(let machine):
@@ -40,9 +40,13 @@ class StyleViewModel {
                 self?.styles = machine.types ?? []
                 DispatchQueue.main.async {
                     self?.updateHandler()
+                    completion()
                 }
             case.failure(let err):
                 print(err)
+                DispatchQueue.main.async {
+                    completion()
+                }
             }
         }
     }
