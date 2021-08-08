@@ -3,7 +3,7 @@ import UIKit
 class ExtraParentViewModel {
     var section : Int = 0
 
-    var isCollbsed = false{
+    var isCollapsed = false{
         didSet{
             reloadState()
         }

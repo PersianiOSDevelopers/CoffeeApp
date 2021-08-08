@@ -53,7 +53,7 @@ extension ExtraController : UITableViewDelegate , UITableViewDataSource{
         guard let vm = vm else {
             return 0
         }
-        if vm.extraArray[indexPath.row].isCollbsed{
+        if vm.extraArray[indexPath.row].isCollapsed{
             return CGFloat(110 + (76 * vm.extraArray[indexPath.row].selections.count) + 24 )
         }else{
             return 110

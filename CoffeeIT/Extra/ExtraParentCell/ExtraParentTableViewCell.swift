@@ -56,7 +56,7 @@ class ExtraParentTableViewCell: UITableViewCell {
         backView.layer.cornerRadius = 4
     }
     func showState(){
-        if vm?.isCollbsed ?? false{
+        if vm?.isCollapsed ?? false{
             tableView.isHidden = false
             lineView.isHidden = false
         }else{
@@ -67,7 +67,7 @@ class ExtraParentTableViewCell: UITableViewCell {
         parent?.tableView.reloadRows(at: [indexPath], with: .automatic)
     }
     @objc func cell_Tapped(){
-        vm?.isCollbsed.toggle()
+        vm?.isCollapsed.toggle()
     }
     private func addShadow(){
         self.backView.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.15)
