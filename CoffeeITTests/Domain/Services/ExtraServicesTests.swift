@@ -1,10 +1,3 @@
-//
-//  ExtraServicesTests.swift
-//  CoffeeITTests
-//
-//  Created by Amir Tutunchi on 8/7/21.
-//
-
 import XCTest
 @testable import CoffeeIT
 class ExtraServicesTests: XCTestCase {
