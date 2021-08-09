@@ -21,6 +21,7 @@ class MainCoordinator: NSObject , Coordinator  , UINavigationControllerDelegate{
     func goToScan(selectedStyle : StyleModel){
         let scanController = ScanController.instantiate(storyboradName: "Scan", storyboardID: "Scan")
         scanController.coordinator = self
+        scanController.selectedStyle = selectedStyle
         navigationController.pushViewController(scanController, animated: true)
     }
     func goToSizes(selectedStyle : StyleModel){

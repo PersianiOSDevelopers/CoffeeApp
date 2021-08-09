@@ -55,6 +55,7 @@
                     </view>
                     <connections>
                         <outlet property="machineImageView" destination="6Um-JV-rx0" id="8YV-Ik-9dy"/>
+                        <outlet property="titleLbl" destination="dkN-CK-dEf" id="xav-fW-NMq"/>
                         <outlet property="underLineLbl" destination="x3e-vS-9xp" id="ZvI-Ld-LdM"/>
                     </connections>
                 </viewController>

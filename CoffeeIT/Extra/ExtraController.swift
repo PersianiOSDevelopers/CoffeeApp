@@ -2,7 +2,7 @@ import UIKit
 
 class ExtraController: UIViewController , Storyboarded {
     var vm : ExtraViewModel?
-    weak var coordinator : MainCoordinator!
+    weak var coordinator : MainCoordinator?
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backStackView: UIStackView!
     let collapsedSize = 110
@@ -24,7 +24,7 @@ class ExtraController: UIViewController , Storyboarded {
         vm?.getData()
     }
     @objc func back_Tapped(){
-        coordinator.navigationController.popViewController(animated: true)
+        coordinator?.navigationController.popViewController(animated: true)
     }
    
 }

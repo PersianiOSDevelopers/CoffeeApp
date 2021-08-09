@@ -24,6 +24,7 @@ class CoordinatorTests: XCTestCase {
         XCTAssert(sut.navigationController.topViewController is ScanController)
         let scanController = sut.navigationController.topViewController as! ScanController
         XCTAssert(scanController.coordinator == sut)
+        XCTAssertNotNil(scanController.selectedStyle)
     }
     func testGoToSizes(){
         sut.goToSizes(selectedStyle: testStyle)
