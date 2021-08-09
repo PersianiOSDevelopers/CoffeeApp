@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		016022C126C0BC5D00D7EA6D /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016022C026C0BC5D00D7EA6D /* CoordinatorTests.swift */; };
 		0188433A26BF1FC4009108AE /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0188433926BF1FC4009108AE /* UIViewControllerExtension.swift */; };
 		0188434326BF204F009108AE /* SizeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0188434226BF204F009108AE /* SizeController.swift */; };
 		0188434B26BF2059009108AE /* Size.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0188434A26BF2059009108AE /* Size.storyboard */; };
@@ -19,6 +20,8 @@
 		01A462B826C036B7005E9A74 /* UnderLinedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A462B726C036B7005E9A74 /* UnderLinedLabel.swift */; };
 		01A462DC26C05CAB005E9A74 /* SizeServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A462DB26C05CAB005E9A74 /* SizeServicesTests.swift */; };
 		01A462E126C05DB9005E9A74 /* ItemViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A462E026C05DB8005E9A74 /* ItemViewModelTests.swift */; };
+		01B044D826C0C811003FD0F8 /* ExtraControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B044D726C0C811003FD0F8 /* ExtraControllerTests.swift */; };
+		01B044DF26C0CC0D003FD0F8 /* StyleControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B044DE26C0CC0D003FD0F8 /* StyleControllerTests.swift */; };
 		01B71D4226BF7D000099FA34 /* ExtraChildTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B71D4126BF7D000099FA34 /* ExtraChildTableViewCell.swift */; };
 		01B71D4826BF7FEF0099FA34 /* SimpleCheckbox in Frameworks */ = {isa = PBXBuildFile; productRef = 01B71D4726BF7FEF0099FA34 /* SimpleCheckbox */; };
 		01B71D5226BF87AD0099FA34 /* ExtraChildViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B71D5126BF87AD0099FA34 /* ExtraChildViewModel.swift */; };
@@ -66,6 +69,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		016022C026C0BC5D00D7EA6D /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
 		0188433926BF1FC4009108AE /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		0188434226BF204F009108AE /* SizeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeController.swift; sourceTree = "<group>"; };
 		0188434A26BF2059009108AE /* Size.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Size.storyboard; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 		01A462B726C036B7005E9A74 /* UnderLinedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderLinedLabel.swift; sourceTree = "<group>"; };
 		01A462DB26C05CAB005E9A74 /* SizeServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeServicesTests.swift; sourceTree = "<group>"; };
 		01A462E026C05DB8005E9A74 /* ItemViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModelTests.swift; sourceTree = "<group>"; };
+		01B044D726C0C811003FD0F8 /* ExtraControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraControllerTests.swift; sourceTree = "<group>"; };
+		01B044DE26C0CC0D003FD0F8 /* StyleControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleControllerTests.swift; sourceTree = "<group>"; };
 		01B71D4126BF7D000099FA34 /* ExtraChildTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraChildTableViewCell.swift; sourceTree = "<group>"; };
 		01B71D5126BF87AD0099FA34 /* ExtraChildViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraChildViewModel.swift; sourceTree = "<group>"; };
 		01F2782026BED98A000B98E8 /* CoffeeIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeIT.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +142,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		016022BF26C0BC4600D7EA6D /* CoordinatorTest */ = {
+			isa = PBXGroup;
+			children = (
+				016022C026C0BC5D00D7EA6D /* CoordinatorTests.swift */,
+			);
+			path = CoordinatorTest;
+			sourceTree = "<group>";
+		};
 		0188433826BF1FA7009108AE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,12 +189,28 @@
 			path = Scan;
 			sourceTree = "<group>";
 		};
-		01A462DF26C05D84005E9A74 /* ItemViewCell */ = {
+		01A462DF26C05D84005E9A74 /* ItemViewCellTest */ = {
 			isa = PBXGroup;
 			children = (
 				01A462E026C05DB8005E9A74 /* ItemViewModelTests.swift */,
 			);
-			path = ItemViewCell;
+			path = ItemViewCellTest;
+			sourceTree = "<group>";
+		};
+		01B044D626C0C7D5003FD0F8 /* ExtraTest */ = {
+			isa = PBXGroup;
+			children = (
+				01B044D726C0C811003FD0F8 /* ExtraControllerTests.swift */,
+			);
+			path = ExtraTest;
+			sourceTree = "<group>";
+		};
+		01B044DD26C0CBFA003FD0F8 /* StyleTest */ = {
+			isa = PBXGroup;
+			children = (
+				01B044DE26C0CC0D003FD0F8 /* StyleControllerTests.swift */,
+			);
+			path = StyleTest;
 			sourceTree = "<group>";
 		};
 		01B71D5726BF96980099FA34 /* ExtraChildCell */ = {
@@ -234,8 +264,11 @@
 		01F2783926BED98B000B98E8 /* CoffeeITTests */ = {
 			isa = PBXGroup;
 			children = (
-				01A462DF26C05D84005E9A74 /* ItemViewCell */,
-				01F278B426BEF823000B98E8 /* Domain */,
+				01B044DD26C0CBFA003FD0F8 /* StyleTest */,
+				01B044D626C0C7D5003FD0F8 /* ExtraTest */,
+				016022BF26C0BC4600D7EA6D /* CoordinatorTest */,
+				01A462DF26C05D84005E9A74 /* ItemViewCellTest */,
+				01F278B426BEF823000B98E8 /* DomainTest */,
 				01F2783C26BED98B000B98E8 /* Info.plist */,
 			);
 			path = CoffeeITTests;
@@ -323,21 +356,21 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		01F278B426BEF823000B98E8 /* Domain */ = {
+		01F278B426BEF823000B98E8 /* DomainTest */ = {
 			isa = PBXGroup;
 			children = (
-				01F278B526BEF839000B98E8 /* Services */,
+				01F278B526BEF839000B98E8 /* ServicesTest */,
 			);
-			path = Domain;
+			path = DomainTest;
 			sourceTree = "<group>";
 		};
-		01F278B526BEF839000B98E8 /* Services */ = {
+		01F278B526BEF839000B98E8 /* ServicesTest */ = {
 			isa = PBXGroup;
 			children = (
 				01F278B626BEF853000B98E8 /* ExtraServicesTests.swift */,
 				01A462DB26C05CAB005E9A74 /* SizeServicesTests.swift */,
 			);
-			path = Services;
+			path = ServicesTest;
 			sourceTree = "<group>";
 		};
 		01F278BE26BEFB3E000B98E8 /* Network */ = {
@@ -511,7 +544,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				016022C126C0BC5D00D7EA6D /* CoordinatorTests.swift in Sources */,
 				01A462DC26C05CAB005E9A74 /* SizeServicesTests.swift in Sources */,
+				01B044D826C0C811003FD0F8 /* ExtraControllerTests.swift in Sources */,
+				01B044DF26C0CC0D003FD0F8 /* StyleControllerTests.swift in Sources */,
 				01F278B726BEF853000B98E8 /* ExtraServicesTests.swift in Sources */,
 				01A462E126C05DB9005E9A74 /* ItemViewModelTests.swift in Sources */,
 			);

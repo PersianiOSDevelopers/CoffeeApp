@@ -4,7 +4,7 @@ class ScanController: UIViewController , Storyboarded {
     weak var coordinator : MainCoordinator?
     @IBOutlet weak var underLineLbl: UnderlinedLabel!
     @IBOutlet weak var machineImageView: UIImageView!
-    
+    var selectedStyle : StyleModel?
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -16,6 +16,8 @@ class ScanController: UIViewController , Storyboarded {
         underLineLbl.text = "How does this work"
     }
     @objc func image_Tapped(){
-        coordinator?.goToSizes()
+        if let selectedStyle = selectedStyle{
+            coordinator?.goToSizes(selectedStyle: selectedStyle)
+        }
     }
 }

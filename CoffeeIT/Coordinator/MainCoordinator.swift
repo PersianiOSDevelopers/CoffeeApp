@@ -4,8 +4,7 @@ import UIKit
 class MainCoordinator: NSObject , Coordinator  , UINavigationControllerDelegate{
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
-    /// selected coffee style by user
-    var selectedStyle : StyleModel?
+
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -19,26 +18,22 @@ class MainCoordinator: NSObject , Coordinator  , UINavigationControllerDelegate{
         styleController.coordinator = self
         navigationController.pushViewController(styleController, animated: true)
     }
-    func goToScan(){
+    func goToScan(selectedStyle : StyleModel){
         let scanController = ScanController.instantiate(storyboradName: "Scan", storyboardID: "Scan")
         scanController.coordinator = self
         navigationController.pushViewController(scanController, animated: true)
     }
-    func goToSizes(){
+    func goToSizes(selectedStyle : StyleModel){
         let sizeController = SizeController.instantiate(storyboradName: "Size", storyboardID: "Size")
-        if let selectedStyle = selectedStyle {
-            let vm = SizeViewModel.init(selectedStyle: selectedStyle)
-            sizeController.vm = vm
-        }
+        let vm = SizeViewModel.init(selectedStyle: selectedStyle)
+        sizeController.vm = vm
         sizeController.coordinator = self
         navigationController.pushViewController(sizeController, animated: true)
     }
-    func goToExtras(){
+    func goToExtras(selectedStyle : StyleModel){
         let extraController = ExtraController.instantiate(storyboradName: "Extra", storyboardID: "Extra")
-        if let selectedStyle = selectedStyle {
-            let vm = ExtraViewModel.init(selectedStyle: selectedStyle)
-            extraController.vm = vm
-        }
+        let vm = ExtraViewModel.init(selectedStyle: selectedStyle)
+        extraController.vm = vm
         extraController.coordinator = self
         navigationController.pushViewController(extraController, animated: true)
     }

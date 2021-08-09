@@ -44,9 +44,8 @@ extension StyleController : UITableViewDelegate , UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let selectedStyle = vm?.styles[indexPath.row]{
-            coordinator?.selectedStyle = selectedStyle
+            coordinator?.goToScan(selectedStyle: selectedStyle)
         }
-        coordinator?.goToScan()
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

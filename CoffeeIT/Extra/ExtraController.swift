@@ -5,6 +5,8 @@ class ExtraController: UIViewController , Storyboarded {
     weak var coordinator : MainCoordinator!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backStackView: UIStackView!
+    let collapsedSize = 110
+    let extraBottomSpace = 24
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,9 +48,9 @@ extension ExtraController : UITableViewDelegate , UITableViewDataSource{
             return 0
         }
         if vm.extraArray[indexPath.row].isCollapsed{
-            return CGFloat(110 + (76 * vm.extraArray[indexPath.row].selections.count) + 24 )
+            return CGFloat(collapsedSize + (76 * vm.extraArray[indexPath.row].selections.count) + extraBottomSpace )
         }else{
-            return 110
+            return CGFloat(collapsedSize)
         }
     }
 }
