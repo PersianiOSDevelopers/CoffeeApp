@@ -30,9 +30,11 @@ class StyleViewModel {
         coffeeMachineRepo.getMenu(machineID: machineId)  { [weak self]  (res : Result<CoffeeMachineModel, Error> )  in
             switch res{
             case.success(let machine):
+                /// cache extras
                 if let extras = machine.extras{
                     self?.extraRepo.saveAllExtras(extras: extras)
                 }
+                /// cache sizes
                 if let sizes = machine.sizes{
                     self?.sizeRepo.saveAllSizes(sizes: sizes)
                 }
