@@ -37,14 +37,5 @@ class CoordinatorTests: XCTestCase {
         let extraController = sut.navigationController.topViewController as! ExtraController
         XCTAssert(extraController.coordinator == sut)
     }
-    
-    // Helper function to select coffee from table view
-    func selectCoffee(){
-        sut.start()
-        let styleController = sut.navigationController.topViewController as! StyleController
-        styleController.vm = StyleViewModel.init(sizeRepo: SizeServices(), extrarepo: ExtraServices(), coffeeMachineRepo: fakeCoffeeMachineRepo())
-        let _ = styleController.view
-        styleController.tableView(styleController.tableView, didSelectRowAt: IndexPath.init(row: 0, section: 0 ))
-    }
 }
 

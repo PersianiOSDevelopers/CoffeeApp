@@ -11,11 +11,3 @@ struct StyleModel : Codable {
         case extras
     }
 }
-
-
-
-
-
-
-
-
