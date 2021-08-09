@@ -26,8 +26,8 @@ class StyleViewModel {
     /// - Parameters:
     ///   - machineId: machine id (provided for future uses :D)
     ///   - completion: completion that data received completely
-    func getData(machineId : String = "60ba1ab72e35f2d9c786c610" , completion : @escaping ()-> Void = {}){
-        coffeeMachineRepo.getMenu(machineID: machineId) { [weak self] (res : Result<CoffeeMachineModel, Error>) in
+    func getData(machineId : String = "60ba1ab72e35f2d9c786c610" , completion : @escaping (_ err : Error? )-> Void = {_ in })  {
+        coffeeMachineRepo.getMenu(machineID: machineId)  { [weak self]  (res : Result<CoffeeMachineModel, Error> )  in
             switch res{
             case.success(let machine):
                 if let extras = machine.extras{
@@ -37,15 +37,11 @@ class StyleViewModel {
                     self?.sizeRepo.saveAllSizes(sizes: sizes)
                 }
                 self?.styles = machine.types ?? []
-                DispatchQueue.main.async {
-                    self?.updateHandler()
-                    completion()
-                }
+                self?.updateHandler()
+                completion(nil)
             case.failure(let err):
                 print(err)
-                DispatchQueue.main.async {
-                    completion()
-                }
+                completion(err)
             }
         }
     }

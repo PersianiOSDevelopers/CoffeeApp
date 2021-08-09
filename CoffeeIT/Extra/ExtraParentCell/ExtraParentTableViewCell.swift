@@ -45,12 +45,13 @@ class ExtraParentTableViewCell: UITableViewCell {
     private func setupUI(){
         addTapGesture()
         registerTableViewDelegates()
-        vm?.reloadState = showState
+        vm?.reloadState = updateUI
         addShadow()
         backView.layer.cornerRadius = 4
-        showState()
+        updateUI()
     }
-    func showState(){
+    /// update ui based on that cell is isCollapsed or not
+    func updateUI(){
         if vm?.isCollapsed ?? false{
             tableView.isHidden = false
             lineView.isHidden = false

@@ -17,12 +17,20 @@ class StyleController: UIViewController  , Storyboarded{
         registerItemTableViewCell(tableView : tableView)
         vm?.updateHandler = tableView.reloadData
     }
-    /// fetch data from the view model and show loading until data receive
+    /// fetch data from the view model and show loading until data receive and show error if there is a problem
     func fetchData(){
         self.startLoading()
-        vm?.getData(completion: {
-            self.stopLoading()
+        vm?.getData(completion: { [weak self] err in
+            self?.stopLoading()
+            if let err = err{
+                self?.showError(error: err)
+            }
         })
+    }
+    func showError(error : Error){
+        let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default))
+        showDetailViewController(alert, sender: self)
     }
 }
 extension StyleController : UITableViewDelegate , UITableViewDataSource{

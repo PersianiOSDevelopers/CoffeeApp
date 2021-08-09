@@ -17,7 +17,7 @@ class ExtraServices : ExtraReopository{
         return nil
     }
     /// save all extra  array to  UserDefaults
-    /// - Parameter extras: <#extras description#>
+    /// - Parameter extras: extras array to save
     func saveAllExtras(extras: [ExtraModel]) {
         if let encodeObject = try? encoder.encode(extras){
             userDef?.set(encodeObject, forKey: objectName)
