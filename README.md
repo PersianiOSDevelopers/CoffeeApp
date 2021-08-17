@@ -1,3 +1,4 @@
+[![Build&Test](https://github.com/amirtutunchi/coffeeapp/actions/workflows/ios.yml/badge.svg?branch=main)](https://github.com/amirtutunchi/coffeeapp/actions/workflows/ios.yml)
 # CoffeeIT Code Challenge
 This project is a fun demonstration of my skills in a cafe app. we all love coffee 🤘🏻
 
