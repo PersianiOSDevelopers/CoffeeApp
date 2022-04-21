@@ -1,7 +1,7 @@
 import Foundation
 class SizeViewModel {
     var sizesArray = [ItemViewModel]()
-    let sizeRepo : SizeReopository
+    let sizeRepo : SizeRepository
     var updateHandler: () -> Void = {}
     let selectedStyle : StyleModel
     
@@ -9,7 +9,7 @@ class SizeViewModel {
     /// - Parameters:
     ///   - sizeRepo: desired size service implementation
     ///   - selectedStyle: selected coffee style
-    init(sizeRepo :SizeReopository = SizeServices() , selectedStyle : StyleModel ){
+    init(sizeRepo :SizeRepository = SizeServices() , selectedStyle : StyleModel ){
         self.selectedStyle = selectedStyle
         self.sizeRepo = sizeRepo
     }

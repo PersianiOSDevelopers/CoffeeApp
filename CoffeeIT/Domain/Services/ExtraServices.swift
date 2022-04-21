@@ -1,5 +1,5 @@
 import Foundation
-class ExtraServices : ExtraReopository{
+class ExtraServices : ExtraRepository{
     let objectName = "extraObject"
     let encoder = JSONEncoder()
     let decoder = JSONDecoder()

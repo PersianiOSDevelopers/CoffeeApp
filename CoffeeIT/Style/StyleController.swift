@@ -1,5 +1,5 @@
 import UIKit
-
+// code style
 class StyleController: UIViewController  , Storyboarded{
     weak var coordinator : MainCoordinator?
     var vm : StyleViewModel?
@@ -19,8 +19,8 @@ class StyleController: UIViewController  , Storyboarded{
     }
     /// fetch data from the view model and show loading until data receive and show error if there is a problem
     func fetchData(){
-        self.startLoading()
-        vm?.getData(completion: { [weak self] err in
+        self.startLoading() // Checked until here
+        vm?.getCoffeeMachineData(completion: { [weak self] err in
             self?.stopLoading()
             if let err = err{
                 self?.showError(error: err)

@@ -1,5 +1,5 @@
 import Foundation
-class SizeServices : SizeReopository{
+class SizeServices : SizeRepository{
     let objectName = "sizeObject"
     let encoder = JSONEncoder()
     let decoder = JSONDecoder()

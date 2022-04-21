@@ -1,5 +1,5 @@
 import Foundation
-protocol ExtraReopository {
+protocol ExtraRepository {
     func getExtraByID(id : String) -> ExtraModel?
     func saveAllExtras(extras : [ExtraModel])-> Void
 }

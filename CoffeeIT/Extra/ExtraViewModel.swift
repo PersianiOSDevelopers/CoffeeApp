@@ -1,7 +1,7 @@
 import Foundation
 
 class ExtraViewModel{
-    let extraRepo : ExtraReopository
+    let extraRepo : ExtraRepository
     let selectedStyle : StyleModel
     var updateHandler: () -> Void = {}
     var extraArray = [ExtraParentViewModel]()
@@ -10,7 +10,7 @@ class ExtraViewModel{
     /// - Parameters:
     ///   - selectedStyle: selected coffee style
     ///   - extraRepo: desired extra service implementation
-    init(selectedStyle : StyleModel , extraRepo : ExtraReopository = ExtraServices()){
+    init(selectedStyle : StyleModel , extraRepo : ExtraRepository = ExtraServices()){
         self.extraRepo = extraRepo
         self.selectedStyle = selectedStyle
     }
