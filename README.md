@@ -11,7 +11,5 @@ As you can see I tried to write unit tests for different components but unfortun
 ## third-party libraries
 I just used Simplecheckbox for drawing checkbox and I installed it with SPM
 
-## Conclusion
-Thank you so much for reviewing my code. I really appreciated any suggestion you have regarding code and implementation and overall it was a fun journey 🤝  Hope we work together on awesome projects 😅
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
