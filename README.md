@@ -6,7 +6,7 @@ This project is a fun cafe app. we all love coffee 🤘🏻
 The main architecture of the project is MVVM-Coordinator but in every project and context I would think what is the best solution, I try to use repositories, DI and create abstractions to achieve better testability and more clean and scaleable code
 
 ## Unit-Tests
-As you can see I tried to write unit tests for different components but unfortunately test coverage is not high. I try to show my testing skills in different components
+As you can see I tried to write unit tests for different components but unfortunately test coverage is not high. 
 
 ## third-party libraries
 I just used Simplecheckbox for drawing checkbox and I installed it with SPM
